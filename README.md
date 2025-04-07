@@ -12,6 +12,6 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 
 ## Progress Log
 - Started: April 5, 2025
-- [x] Day 1 (Apr 5): HTML basics - Build a simple webpage
-- [x] Day 2 (Apr 6): CSS basics - Style with Flexbox
-- [x] Day 3 (Apr 7): CSS Grid - Add a grid section
+- [x] Day 1 (Apr 5): HTML basics - Built a simple webpage
+- [x] Day 2 (Apr 6): CSS basics - Styled with Flexbox
+- [x] Day 3 (Apr 7): CSS Grid - Added a grid section
