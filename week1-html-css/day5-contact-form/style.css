@@ -5,7 +5,19 @@
     line-height: calc(1em + 0.5rem);
 }
 :root{
-    
+    --xs:0.75rem;
+    --sm:0.875rem;
+    --base:1rem;
+    --lg:1.125rem;
+    --xl:1.25rem;
+    --2xl:1.5rem;
+    --3xl:1.875rem;
+    --4xl:2.25rem;
+    --5xl:3rem;
+    --6xl:3.75rem;
+    --7xl:4.5rem;
+    --8xl:6rem;
+    --9xl:8rem;
 }
 input::placeholder {
     color: rgb(0, 0, 0);
@@ -35,6 +47,8 @@ body{
 }
 .btn{
     display: block;
+    align-self: center;
+    width:70%;
     border:none;
     background-color: rgb(129, 6, 6);
     color: #ffffff;
@@ -42,18 +56,34 @@ body{
     padding: 0.3rem 0.9rem;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.25s;
 }
+
+.btn:hover{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 25px 0px rgba(110, 38, 38, 0.5),
+    -2px -2px 25px 0px rgba(45, 5, 5, 0.5),
+    -2px 2px 25px 0px rgba(2, 0, 0, 0.5),
+    2px -4px 25px 0px rgba(255, 248, 248, 0.5);
+}
+
 .navbar__header{
     display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap:3rem;
-    font-weight: 600;
+    justify-content: end;
 }
-.navbar__items a{
-text-decoration: none;
-color: #f8f4e7;
+.navbar__header button{
+    display: block;
+    border:none;
+    color: white;
+    height: var(--4xl);
+    width: var(--4xl);
+    background-color:#01014b;
+    cursor: pointer;
+
+}
+.navbar__items{
+    display: none;
 }
 
 .form form{
@@ -62,11 +92,21 @@ color: #f8f4e7;
     gap:1rem;
     font-weight: 600;
     background-color: rgb(0, 0, 0, 0.5);
-    box-shadow: 0.85px 0.25px  20px rgb(255, 255, 255);
+    box-shadow: 0.5px 0.5px  10px 0px rgb(255, 255, 255);
     padding: 1.5rem 0.85rem;
 }
 .form form h1{
     align-self: center;
+}
+.form form input{
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.copyright{
+    text-align: center;
 }
 
 @media (min-width:425px) {
@@ -78,15 +118,110 @@ color: #f8f4e7;
     .container{
         max-width: 640px;
     }
+    .navbar__header button{
+        display:none;
+    }
+    .navbar__header{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        gap:3rem;
+        font-weight: 600;
+        font-size: var(--lg);
+    }
+    .navbar__items{
+        display: flex;
+    }
+    .navbar__items a{
+    text-decoration: none;
+    color: #f8f4e7;
+    }
+
+    .form form{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap:0.5rem;
+        font-weight: 600;
+        background-color: rgb(0, 0, 0, 0.5);
+        box-shadow: 0.5px 0.5px  10px 0px rgb(255, 255, 255);
+        padding: 1.5rem 0.85rem;
+        gap:1.5rem;
+        
+    }
+    .form form h1{
+        grid-column: span 2;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: var(--2xl);
+    }
+    .form label{
+        text-align: end;
+    }
+    .form form input{
+     margin-left: 20px;
+     text-align: center;
+     margin-bottom: 10px;
+     width: 70%;
+     padding: 0.3rem 1rem;
+    }
+    .btn{
+        font-size: var(--lg);
+        margin-top: -5px;
+        width: 25%;
+        margin-left: 60%;
+        grid-column: span 2;
+        text-align: center;
+        padding-top: 0.35rem;
+        padding-bottom: 0.35rem;
+    }
+
 }
 @media (min-width:768px) {
     .container{
         max-width: 768px;
     }
+    .navbar__header{
+       
+        font-size: var(--xl);
+    }
+
+    .form form h1{
+        font-size: var(--3xl);
+    }
+    .form form label{
+        font-size:var(--xl);
+    }
+
+    .btn{
+        width: 14%;
+        margin-left: 68%;
+    }
+   
 }
 @media (min-width: 1024px) {
     .container{
         max-width: 1024px;
+    }
+    .navbar__header{
+       
+        font-size: var(--2xl);
+    }
+
+    .form form h1{
+        font-size: var(--4xl);
+    }
+    .form form label{
+        font-size:var(--2xl);
+    }
+    .form form input{
+        height: var(--4xl);
+    }
+
+    .btn{
+        font-size: var(--xl);
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
     }
 }
 @media (min-width:1280px) {
