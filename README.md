@@ -16,3 +16,4 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 2 (Apr 6): CSS basics - Styled with Flexbox
 - [x] Day 3 (Apr 7): CSS Grid - Added a grid section
 - [x] Day 4 (Apr 8): Responsive design - Media queries
+- [x] Day 5 (Apr 9): Forms & accessibility - Add a contact form
