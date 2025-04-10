@@ -34,3 +34,24 @@ body {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+
+.loader{
+    width:50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    border:10px solid grey;
+    border-top:10px solid rgb(0, 195, 255);
+    animation: loader 2s linear  infinite;
+}
+
+@keyframes loader{
+0%{
+    rotate: 0deg;
+}
+100%{
+    rotate:360deg;
+}
+}
+
