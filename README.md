@@ -18,3 +18,4 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 4 (Apr 8): Responsive design - Media queries
 - [x] Day 5 (Apr 9): Forms & accessibility - Add a contact form
 - [x] Day 6 (Apr 10): CSS animations - Add polish
+- [X] Day 7 (Apr 11): Landing page - Mini-project
