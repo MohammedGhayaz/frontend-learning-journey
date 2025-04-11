@@ -19,3 +19,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 5 (Apr 9): Forms & accessibility - Add a contact form
 - [x] Day 6 (Apr 10): CSS animations - Add polish
 - [X] Day 7 (Apr 11): Landing page - Mini-project
+
+## Progress Log
+- Started: April 5, 2025
+- Week 1 Completed: April 11, 2025 - Built a landing page with Flexbox, Grid, animations, and a linked contact form
