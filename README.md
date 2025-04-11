@@ -10,6 +10,16 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (Apr 10): CSS animations - Add polish
 - [ ] Day 7 (Apr 11): Landing page - Mini-project
 
+
+Week 2: JavaScript Basics (April 12 - April 18)
+- [ ] Day 1 (Apr 12): Introduction to Javascript ES6 - Build a simple calculator
+- [ ] Day 2 (Apr 13): Intermediate Javascript - Create a to-do list app
+- [ ] Day 3 (Apr 14): The Document Object Model (DOM) - Enhance landing page with DOM
+- [ ] Day 4 (Apr 15): DOM & Dicee Game - Build the Dicee Game project
+- [ ] Day 5 (Apr 16): Advanced Javascript - Create a simple quiz app
+- [ ] Day 6 (Apr 17): jQuery - Recreate contact form with jQuery
+- [ ] Day 7 (Apr 18): jQuery & Simon Game - Build the Simon Game project
+
 ## Progress Log
 - Started: April 5, 2025
 - [x] Day 1 (Apr 5): HTML basics - Built a simple webpage
