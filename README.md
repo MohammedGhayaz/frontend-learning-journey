@@ -30,6 +30,9 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 6 (Apr 10): CSS animations - Add polish
 - [X] Day 7 (Apr 11): Landing page - Mini-project
 
+Week 2: JavaScript Basics (April 12 - April 18)
+- [x] Day 1 (Apr 12): Introduction to Javascript ES6 - Build a simple calculator
+
 ## Progress Log
 - Started: April 5, 2025
 - Week 1 Completed: April 11, 2025 - Built a landing page with Flexbox, Grid, animations, and a linked contact form
