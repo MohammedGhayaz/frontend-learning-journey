@@ -31,8 +31,8 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [X] Day 7 (Apr 11): Landing page - Mini-project
 
 Week 2: JavaScript Basics (April 12 - April 18)
-- [x] Day 1 (Apr 12): Introduction to Javascript ES6 - Build a simple calculator
-- [x] Day 2 (Apr 13): Control structures - Create a number guessing game
+- [x] Day 1 (Apr 12): Introduction to Javascript ES6 - Built a simple calculator
+- [x] Day 2 (Apr 13): Control structures - Created a number guessing game
 
 ## Progress Log
 - Started: April 5, 2025
