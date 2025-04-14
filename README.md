@@ -33,6 +33,7 @@ Week 2: JavaScript Basics (April 12 - April 18)
 Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 1 (Apr 12): Introduction to Javascript ES6 - Built a simple calculator
 - [x] Day 2 (Apr 13): Control structures - Created a number guessing game
+- [x] Day 3 (Apr 14): Arrays and objects - Build a shopping list app
 
 ## Progress Log
 - Started: April 5, 2025
