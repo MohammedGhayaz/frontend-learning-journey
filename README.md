@@ -35,7 +35,7 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 2 (Apr 13): Control structures - Created a number guessing game
 - [x] Day 3 (Apr 14): Arrays and objects - Built a shopping list app
 - [x] Day 4 (Apr 15): ES6 features - Practice arrow functions
-- [ ] Day 5 (Apr 16): Review and practice
+- [x] Day 5 (Apr 16): Created head and tails game!
 
 ## Progress Log
 - Started: April 5, 2025
