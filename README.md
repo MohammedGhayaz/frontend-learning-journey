@@ -10,15 +10,17 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (Apr 10): CSS animations - Add polish
 - [ ] Day 7 (Apr 11): Landing page - Mini-project
 
-
 Week 2: JavaScript Basics (April 12 - April 18)
 - [ ] Day 1 (Apr 12): Introduction to Javascript ES6 - Build a simple calculator
 - [ ] Day 2 (Apr 13): Control structures - Create a number guessing game
 - [ ] Day 3 (Apr 14): Arrays and objects - Build a shopping list app
 - [ ] Day 4 (Apr 15): ES6 features - Practice arrow functions
 - [ ] Day 5 (Apr 16): Review and practice
-- [ ] Day 6 (Apr 17): DOM basics - Enhance landing page with DOM
+- [ ] Day 6 (Apr 17): DOM basics
 - [ ] Day 7 (Apr 18): DOM basics continued - Add interactivity to landing page
+
+
+
 
 ## Progress Log
 - Started: April 5, 2025
@@ -36,6 +38,10 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 3 (Apr 14): Arrays and objects - Built a shopping list app
 - [x] Day 4 (Apr 15): ES6 features - Practice arrow functions
 - [x] Day 5 (Apr 16): Created head and tails game!
+- [x] Day 6 (Apr 17): DOM basics 
+
+
+
 
 ## Progress Log
 - Started: April 5, 2025
