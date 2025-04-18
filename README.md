@@ -17,7 +17,7 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [ ] Day 4 (Apr 15): ES6 features - Practice arrow functions
 - [ ] Day 5 (Apr 16): Review and practice
 - [ ] Day 6 (Apr 17): DOM basics
-- [ ] Day 7 (Apr 18): DOM basics continued - Add interactivity to landing page
+- [ ] Day 7 (Apr 18): DOM basics continued
 
 
 
@@ -38,7 +38,8 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 3 (Apr 14): Arrays and objects - Built a shopping list app
 - [x] Day 4 (Apr 15): ES6 features - Practice arrow functions
 - [x] Day 5 (Apr 16): Created head and tails game!
-- [x] Day 6 (Apr 17): DOM basics 
+- [x] Day 6 (Apr 17): DOM basics
+- [x] Day 7 (Apr 18): DOM basics continued
 
 
 
