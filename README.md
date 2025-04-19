@@ -10,7 +10,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (Apr 10): CSS animations - Add polish
 - [ ] Day 7 (Apr 11): Landing page - Mini-project
 
-Week 2: JavaScript Basics (April 12 - April 18)
+## Week 2: JavaScript Basics (April 12 - April 18)
 - [ ] Day 1 (Apr 12): Introduction to Javascript ES6 - Build a simple calculator
 - [ ] Day 2 (Apr 13): Control structures - Create a number guessing game
 - [ ] Day 3 (Apr 14): Arrays and objects - Build a shopping list app
@@ -19,6 +19,15 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [ ] Day 6 (Apr 17): DOM basics
 - [ ] Day 7 (Apr 18): DOM basics continued
 
+
+## Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
+- [ ] Day 1 (Apr 19, Sat, 4.5h): DOM manipulation - Selecting and modifying elements 
+- [ ] Day 2 (Apr 20, Sun, 4.5h): DOM manipulation - Creating and removing elements, practice with small tasks
+- [ ] Day 3 (Apr 21, Mon, 2h): Event handling - Event listeners, basic events 
+- [ ] Day 4 (Apr 22, Tue, 2h): Event handling - Event propagation, preventing default actions
+- [ ] Day 5 (Apr 23, Wed, 2h): Practice: Build a small interactive feature 
+- [ ] Day 6 (Apr 24, Thu, 2h): Review DOM and events, fix issues in practice project
+- [ ] Day 7 (Apr 25, Fri, 2h): Start mini-project: Interactive webpage with DOM 
 
 
 
@@ -47,3 +56,4 @@ Week 2: JavaScript Basics (April 12 - April 18)
 ## Progress Log
 - Started: April 5, 2025
 - Week 1 Completed: April 11, 2025 - Built a landing page with Flexbox, Grid, animations, and a linked contact form
+- Week 2 Completed: April 18, 2025 - Javascript Basics
