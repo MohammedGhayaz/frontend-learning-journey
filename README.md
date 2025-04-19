@@ -21,13 +21,13 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 
 
 ## Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
-- [ ] Day 1 (Apr 19, Sat, 4.5h): DOM manipulation - Selecting and modifying elements 
-- [ ] Day 2 (Apr 20, Sun, 4.5h): DOM manipulation - Creating and removing elements, practice with small tasks
-- [ ] Day 3 (Apr 21, Mon, 2h): Event handling - Event listeners, basic events 
-- [ ] Day 4 (Apr 22, Tue, 2h): Event handling - Event propagation, preventing default actions
-- [ ] Day 5 (Apr 23, Wed, 2h): Practice: Build a small interactive feature 
-- [ ] Day 6 (Apr 24, Thu, 2h): Review DOM and events, fix issues in practice project
-- [ ] Day 7 (Apr 25, Fri, 2h): Start mini-project: Interactive webpage with DOM 
+- [ ] Day 1 (Apr 19, Sat): DOM manipulation - Selecting and modifying elements 
+- [ ] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practice with small tasks
+- [ ] Day 3 (Apr 21, Mon): Event handling - Event listeners, basic events 
+- [ ] Day 4 (Apr 22, Tue): Event handling - Event propagation, preventing default actions
+- [ ] Day 5 (Apr 23, Wed): Practice: Build a small interactive feature 
+- [ ] Day 6 (Apr 24, Thu): Review DOM and events, fix issues in practice project
+- [ ] Day 7 (Apr 25, Fri): Start mini-project: Interactive webpage with DOM 
 
 
 
@@ -50,6 +50,8 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 6 (Apr 17): DOM basics
 - [x] Day 7 (Apr 18): DOM basics continued
 
+Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
+- [x] Day 1 (Apr 19, Sat): DOM manipulation - Selecting and modifying elements 
 
 
 
