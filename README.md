@@ -52,7 +52,7 @@ Week 2: JavaScript Basics (April 12 - April 18)
 
 Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [x] Day 1 (Apr 19, Sat): DOM manipulation - Selecting and modifying elements 
-- [x] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practice with small tasks
+- [x] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practiced with small tasks
 
 
 
