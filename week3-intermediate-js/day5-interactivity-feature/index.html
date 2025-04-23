@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            background-color: rgb(223, 14, 14);
+            border: 3px solid black;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button,
+        .copy-button{
+            border: none;
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 0.7rem 1rem;
+            margin: 0px auto;
+            background-color: rgb(197, 194, 194);
+            transition: all 0.15s ease;
+        }
+        button:hover{
+            background-color:  rgb(24, 24, 24);
+            color: white;
+        }
+    
+    </style>
+    <title>Interactivity page
+    </title>
+</head>
+<body>
+    <div class="box">
+        <button class="copy-button">
+            Copy Color
+        </button>
+    </div>
+    <button class="button"> Change Color </button>
+    <script src="./script.js"></script>
+</body>
+</html>
