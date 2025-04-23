@@ -55,6 +55,7 @@ Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [x] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practiced with small tasks
 - [x] Day 3 (Apr 21, Mon): Event handling - Event listeners, basic events 
 - [x] Day 4 (Apr 22, Tue): Event handling - Event propagation, preventing default actions
+- [x] Day 5 (Apr 23, Wed): Practice: Build a small interactive feature 
 
 
 
