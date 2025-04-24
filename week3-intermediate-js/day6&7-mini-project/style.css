@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    line-height: calc(1.5em + 0.5rem);
+}
+h1{
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0.5rem 0.5rem;
+}
+input{
+    width: 70%;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+.container div{
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.task-container{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1.5fr 4fr 1fr;
+    gap: 1em;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+}
+
+.add-button{
+border: none;
+border-radius: 3px;
+padding: 0.5rem 0.8rem;
+cursor: pointer;
+font-weight: bold;
+background-color: rgb(0, 182, 0);
+color: white;
+transition: all 0.15s;
+}
+
+.add-button:hover{
+    background-color: rgba(2, 122, 2, 0.764);
+}
+
+.delete-button{
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1.3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(182, 0, 0);
+    color: white;
+    transition: all 0.15s;
+    }
+    
+    .delete-button:hover{
+        background-color: rgba(162, 2, 2, 0.764);
+    }
