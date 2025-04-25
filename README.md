@@ -29,6 +29,17 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (Apr 24, Thu): Review DOM and events, fix issues in practice project
 - [ ] Day 7 (Apr 25, Fri): Start mini-project: Interactive webpage with DOM 
 
+## Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
+- [ ] Day 1 (Apr 26, Sat): Asynchronous JavaScript - Callbacks, setTimeout, basic concepts
+- [ ] Day 2 (Apr 27, Sun): Callbacks - Practice with callback functions, small exercises
+- [ ] Day 3 (Apr 28, Mon): Promises - Creating and chaining promises
+- [ ] Day 4 (Apr 29, Tue): Promises - Error handling with promises
+- [ ] Day 5 (Apr 30, Wed): Async/await - Syntax and basic usage
+- [ ] Day 6 (May 1, Thu): Async/await - Handling errors with try/catch
+- [ ] Day 7 (May 2, Fri): Practice - Small async task (e.g., sequential async updates)
+
+
+
 
 
 ## Progress Log
