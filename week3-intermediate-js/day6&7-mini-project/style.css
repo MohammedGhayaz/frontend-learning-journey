@@ -31,10 +31,15 @@ input{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1.5fr 4fr 1fr;
-    gap: 1em;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 1rem;
+    gap: 1rem;
+    background-color: rgb(39, 33, 33);
+    color: white;
+    margin: 1rem;
     display: none;
+    border:1px solid red;
 }
 
 .add-button{
