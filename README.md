@@ -70,6 +70,8 @@ Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [x] Day 6 (Apr 24, Thu): Review DOM and events, fix issues in practice project
 - [x] Day 7 (Apr 25, Fri): Start mini-project: Interactive webpage with DOM 
 
+Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
+- [x] Day 1 (Apr 26, Sat): Asynchronous JavaScript - Callbacks, setTimeout, basic concepts
 
 
 ## Progress Log
