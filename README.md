@@ -72,6 +72,7 @@ Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 
 Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 1 (Apr 26, Sat): Asynchronous JavaScript - Callbacks, setTimeout, basic concepts
+- [x] Day 2 (Apr 27, Sun): Callbacks - Practice with callback functions, small exercises
 
 
 ## Progress Log
