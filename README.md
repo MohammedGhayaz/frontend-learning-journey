@@ -75,6 +75,7 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 2 (Apr 27, Sun): Callbacks - Practice with callback functions, small exercises
 - [x] Day 3 (Apr 28, Mon): Promises - Creating and chaining promises
 - [x] Day 4 (Apr 29, Tue): Promises - Error handling with promises
+- [x] Day 5 (Apr 30, Wed): Async/await - Syntax and basic usage
 
 
 ## Progress Log
