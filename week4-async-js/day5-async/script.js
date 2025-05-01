@@ -19,7 +19,7 @@ const fethUserProfile = () => {
         
         const randomNumber = Math.round( Math.random() * 100 );
         setTimeout(()=>{
-            if(randomNumber => 40){
+            if(randomNumber >= 40){
                 console.log('User profile fetched');
                 resolve('Success');
             }
