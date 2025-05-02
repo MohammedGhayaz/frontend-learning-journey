@@ -77,9 +77,12 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 4 (Apr 29, Tue): Promises - Error handling with promises
 - [x] Day 5 (Apr 30, Wed): Async/await - Syntax and basic usage
 - [x] Day 6 (May 1, Thu): Async/await - Handling errors with try/catch
+- [x] Day 7 (May 2, Fri): Practice - Small async task (e.g., sequential async updates)
 
 
 ## Progress Log
 - Started: April 5, 2025
 - Week 1 Completed: April 11, 2025 - Built a landing page with Flexbox, Grid, animations, and a linked contact form
 - Week 2 Completed: April 18, 2025 - Javascript Basics
+- Week 3 Completed: April 25, 2025 - Advanced JavaScript - DOM and Events 
+- Week 4 Conpleted: May 02, 2025 - Asynchronous JavaScript
