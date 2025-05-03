@@ -89,6 +89,8 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 6 (May 1, Thu): Async/await - Handling errors with try/catch
 - [x] Day 7 (May 2, Fri): Practice - Small async task (e.g., sequential async updates)
 
+## Week 5: Fetch API and Project (May 3 - May 9, 2025)
+- [x] Day 1 (May 3, Sat): Fetch API - Making GET requests, fetch basics
 
 ## Progress Log
 - Started: April 5, 2025
