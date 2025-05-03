@@ -19,7 +19,6 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (Apr 17): DOM basics
 - [ ] Day 7 (Apr 18): DOM basics continued
 
-
 ## Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [ ] Day 1 (Apr 19, Sat): DOM manipulation - Selecting and modifying elements 
 - [ ] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practice with small tasks
@@ -37,6 +36,17 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 5 (Apr 30, Wed): Async/await - Syntax and basic usage
 - [ ] Day 6 (May 1, Thu): Async/await - Handling errors with try/catch
 - [ ] Day 7 (May 2, Fri): Practice - Small async task (e.g., sequential async updates)
+
+## Week 5: Fetch API and Project (May 3 - May 9, 2025)
+- [ ] Day 1 (May 3, Sat): Fetch API - Making GET requests, fetch basics
+- [ ] Day 2 (May 4, Sun): Fetch API - Handling JSON responses, basic error handling
+- [ ] Day 3 (May 5, Mon): Fetch API - Making POST requests, sending data
+- [ ] Day 4 (May 6, Tue): Project - Plan simple API app (e.g., display public API data)
+- [ ] Day 5 (May 7, Wed): Project - Build API app, fetch and display data
+- [ ] Day 6 (May 8, Thu): Project - Add interactivity (e.g., refresh button)
+- [ ] Day 7 (May 9, Fri): Project - Polish app, upload to GitHub, review Fetch API
+
+
 
 
 
