@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(53, 8, 5);
+  padding: 1rem;
+  font-size: 1.15rem;
+  color: white;
+}
+
+.navbar-left ul{
+  font-weight: bolder;
+  list-style: none;
+}
+
+.navbar-right ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap:2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
