@@ -108,6 +108,25 @@ nav{
   transform: scale(1.05);
 }
 
+.input-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.input-div input{
+  display: block;
+  width: 80%;
+  padding: 1rem 1rem;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 1.1rem;
+}
+
+
+
+
+
 
 
 @media (width<=1024px) {
