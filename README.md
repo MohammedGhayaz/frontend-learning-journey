@@ -95,6 +95,8 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 3 (May 5, Mon): Fetch API - Making POST requests, sending data
 - [x] Day 4 (May 6, Tue): Project - Plan simple API app (e.g., display public API data)
 - [x] Day 5 (May 7, Wed): Project - Build API app, fetch and display data
+- [x] Day 6 (May 8, Thu): Project - Add interactivity (e.g., refresh button)
+- [x] Day 7 (May 9, Fri): Project - Polish app, upload to GitHub, review Fetch API
 
 ## Progress Log
 - Started: April 5, 2025
@@ -102,3 +104,4 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - Week 2 Completed: April 18, 2025 - Javascript Basics
 - Week 3 Completed: April 25, 2025 - Advanced JavaScript - DOM and Events 
 - Week 4 Conpleted: May 02, 2025 - Asynchronous JavaScript
+- Week 5 Completed: May 9, 2025 - Fetch API and Project
