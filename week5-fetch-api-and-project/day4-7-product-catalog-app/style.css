@@ -124,6 +124,13 @@ nav{
 }
 
 
+.category-select{
+  padding: 1rem 0.5rem;
+  font-size: 1.05rem;
+  margin-left: 0.5rem;
+  border: 1px solid black;
+  border-radius: 2px;
+}
 
 
 
