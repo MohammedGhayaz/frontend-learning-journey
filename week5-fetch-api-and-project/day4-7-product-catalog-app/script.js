@@ -33,6 +33,34 @@ inputElement.addEventListener('input',()=>{
   productsContainer.innerHTML = filteredHtml;
 });
 
+(async function getCategories(){
+  const response =  await fetch('https://fakestoreapi.com/products/categories');
+  const data = await response.json();
+  categories = data;
+  categories.forEach((e) => {
+    selectHtml  += `<option value="${e}">${e}</option>`;
+  })
+  selectElement.innerHTML = selectHtml;
+})();
+
+selectElement.addEventListener('change', ()=>{
+    let categoriesHtml = '';
+  let categoryProducts = [];
+  const selectedElement =  selectElement.value;
+  categoryProducts = allProducts.filter((e)=>{
+    if(e.category === selectedElement){
+      return true;
+    }
+    else{
+      return false;
+    }
+  })
+  categoryProducts.forEach((e)=>{
+    categoriesHtml += dynamicHTML(e);
+  })
+  productsContainer.innerHTML = categoriesHtml;
+})
+
 function dynamicHTML(e){
   return `<div class="grid-items">
   <div class="image">
