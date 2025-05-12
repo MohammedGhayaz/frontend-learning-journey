@@ -107,6 +107,7 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 
 ## Week 6: JavaScript Modules and Local Storage (May 10 - May 16, 2025)
 - [x] Day 1 (May 10, Sat): Modules - ES6 import/export syntax, basics
+- [x] Day 2 (May 11, Sun): Modules - Practice organizing code with modules
 
 ## Progress Log
 - Started: April 5, 2025
