@@ -8,20 +8,26 @@
   <title>Expense Tracker App</title>
 </head>
 <body>
-  <h1>Expense Tracker</h1>
-  <form>
-    <div>
-      <label for="">Title</label>
-      <input type="text">
+  <div class="container">
+    <form id="expense-form">
+      <h1>Expense Tracker</h1>
+      <div class="box">
+        <label for="title">Title</label>
+      <input id="title" type="text" >
     </div>
-    <div>
-      <label for="">Amount</label>
-      <input type="number">
+    <div class="box">
+      <label for="amount">Amount</label>
+      <input id="amount" type="number">
     </div>
-    <div>
+    <div class="box">
       <button type="submit"> Add Expense </button>
     </div>
   </form>
+</div>
+  <div>
+    <li>
+    </li>
+  </div>
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>
