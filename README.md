@@ -51,7 +51,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 2 (May 11, Sun): Modules - Practice organizing code with modules
 - [ ] Day 3 (May 12, Mon): Local Storage - Saving data with localStorage
 - [ ] Day 4 (May 13, Tue): Local Storage - Retrieving and updating stored data
-- [ ] Day 5 (May 14, Wed): Project - Start to-do list app with local storage
+- [ ] Day 5 (May 14, Wed): Project - Start expense tracker app with local storage
 - [ ] Day 6 (May 15, Thu): Project - Add core features (add/delete tasks)
 - [ ] Day 7 (May 16, Fri): Project - Complete app, upload to GitHub, review modules/storage
 
@@ -108,6 +108,11 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 ## Week 6: JavaScript Modules and Local Storage (May 10 - May 16, 2025)
 - [x] Day 1 (May 10, Sat): Modules - ES6 import/export syntax, basics
 - [x] Day 2 (May 11, Sun): Modules - Practice organizing code with modules
+- [x] Day 3 (May 12, Mon): Local Storage - Saving data with localStorage
+- [x] Day 4 (May 13, Tue): Local Storage - Retrieving and updating stored data
+- [x] Day 5 (May 14, Wed): Project - Start expense tracker app with local storage
+- [x] Day 6 (May 15, Thu): Project - Add core features (add/delete tasks)
+
 
 ## Progress Log
 - Started: April 5, 2025
