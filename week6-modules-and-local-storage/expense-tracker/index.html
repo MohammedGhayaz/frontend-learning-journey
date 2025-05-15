@@ -4,28 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
   <title>Expense Tracker App</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-custom">
     <form id="expense-form">
       <h1>Expense Tracker</h1>
-      <div class="box">
+      <div class="align-div">
         <label for="title">Title</label>
-      <input id="title" type="text" >
-    </div>
-    <div class="box">
-      <label for="amount">Amount</label>
-      <input id="amount" type="number">
-    </div>
-    <div class="box">
-      <button type="submit"> Add Expense </button>
-    </div>
-  </form>
-</div>
-  <div>
-    <li>
+      </div>
+      <div class="align-div">
+        <input class='title-input' id="title" type="text" >  
+      </div>
+      <div class="align-div">
+        <label for="amount">Amount</label>
+      </div>
+      <div class="align-div">
+        <input class="amount-input" id="amount" type="number">
+      </div>
+      <button class="button" type="submit"> Add Expense </button>
+    </form>
+  </div>
+  <div class="list-container">
+    <li class="list">
+      <div class="align-div">
+        <ul>Sl. No</ul>
+      </div>
+      <div class="align-div">
+        <ul>Name of the Budget</ul>
+      </div>
+      <div class="align-div">
+        <ul>Price</ul>
+      </div>
+      <div class="align-div">
+        <ul>Action</ul>
+      </div>
     </li>
   </div>
   <script type="module" src="./js/app.js"></script>
