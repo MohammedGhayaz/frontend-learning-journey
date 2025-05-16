@@ -112,6 +112,7 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 4 (May 13, Tue): Local Storage - Retrieving and updating stored data
 - [x] Day 5 (May 14, Wed): Project - Start expense tracker app with local storage
 - [x] Day 6 (May 15, Thu): Project - Add core features (add/delete tasks)
+- [x] Day 7 (May 16, Fri): Project - Complete app, upload to GitHub, review modules/storage
 
 
 ## Progress Log
