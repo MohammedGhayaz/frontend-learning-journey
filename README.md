@@ -69,7 +69,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 6 (Apr 10): CSS animations - Add polish
 - [X] Day 7 (Apr 11): Landing page - Mini-project
 
-Week 2: JavaScript Basics (April 12 - April 18)
+## Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 1 (Apr 12): Introduction to Javascript ES6 - Built a simple calculator
 - [x] Day 2 (Apr 13): Control structures - Created a number guessing game
 - [x] Day 3 (Apr 14): Arrays and objects - Built a shopping list app
@@ -78,7 +78,7 @@ Week 2: JavaScript Basics (April 12 - April 18)
 - [x] Day 6 (Apr 17): DOM basics
 - [x] Day 7 (Apr 18): DOM basics continued
 
-Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
+## Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [x] Day 1 (Apr 19, Sat): DOM manipulation - Selecting and modifying elements 
 - [x] Day 2 (Apr 20, Sun): DOM manipulation - Creating and removing elements, practiced with small tasks
 - [x] Day 3 (Apr 21, Mon): Event handling - Event listeners, basic events 
@@ -87,7 +87,7 @@ Week 3: Advanced JavaScript - DOM and Events (April 19 - April 25)
 - [x] Day 6 (Apr 24, Thu): Review DOM and events, fix issues in practice project
 - [x] Day 7 (Apr 25, Fri): Start mini-project: Interactive webpage with DOM 
 
-Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
+## Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - [x] Day 1 (Apr 26, Sat): Asynchronous JavaScript - Callbacks, setTimeout, basic concepts
 - [x] Day 2 (Apr 27, Sun): Callbacks - Practice with callback functions, small exercises
 - [x] Day 3 (Apr 28, Mon): Promises - Creating and chaining promises
@@ -122,3 +122,4 @@ Week 4: Asynchronous JavaScript (April 26 - May 2, 2025)
 - Week 3 Completed: April 25, 2025 - Advanced JavaScript - DOM and Events 
 - Week 4 Conpleted: May 02, 2025 - Asynchronous JavaScript
 - Week 5 Completed: May 9, 2025 - Fetch API and Project
+- Week 6 Completed: May 16, 2025 - JavaScript Modules and Local Storage
