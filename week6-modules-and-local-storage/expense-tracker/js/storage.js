@@ -1,10 +1,9 @@
-const saveToStorage = (data) =>{
-  localStorage.setItem( 'expensesData', JSON.stringify(data));
-}
+const saveToStorage = (data) => {
+  localStorage.setItem('expensesData', JSON.stringify(data));
+};
 
-const getFromStorage = (data) =>{
-  data = JSON.parse(localStorage.getItem('expenseData'));
-  return data;
-}
+const getFromStorage = () => {
+  return JSON.parse(localStorage.getItem('expensesData')) || [];
+};
 
 export { saveToStorage, getFromStorage };

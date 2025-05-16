@@ -1,19 +1,25 @@
 import { clearForm, renderExpense, titleInputElement, amountInputElement, buttonElement } from './ui.js';
-import { data,addExpense } from './data.js';
+import { addExpense, getExpenses, setExpenses } from './data.js';
 import { saveToStorage, getFromStorage } from './storage.js';
 
+document.addEventListener('DOMContentLoaded', () => {
+  const dataFromStorage = getFromStorage();
+  setExpenses(dataFromStorage);
+  renderExpense(getExpenses());
+});
 
-buttonElement.addEventListener('click',(e)=>{
+buttonElement.addEventListener('click', (e) => {
   e.preventDefault();
-  data = getFromStorage(data) || data;
-  console.log(typeof titleInputElement.value)
-  if(titleInputElement.value && amountInputElement.value){
-    addExpense(titleInputElement.value, amountInputElement.value );
-    renderExpense(data);
+
+  const title = titleInputElement.value.trim();
+  const amount = amountInputElement.value.trim();
+
+  if (title && amount) {
+    addExpense(title, amount);
+    renderExpense(getExpenses());
+    saveToStorage(getExpenses());
+    clearForm();
+  } else {
+    alert("Please enter both title and amount");
   }
-  else{
-    alert("Please Enter the missing input fields")
-  }
-  clearForm();
-  saveToStorage(data);
-})
+});

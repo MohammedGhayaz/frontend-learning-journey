@@ -1,3 +1,8 @@
+import { removeExpense, getExpenses } from './data.js';
+import { saveToStorage } from './storage.js';
+
+
+
 const buttonElement = document.querySelector('.button');
 const titleInputElement = document.querySelector('.title-input');
 const amountInputElement = document.querySelector('.amount-input');
@@ -8,38 +13,36 @@ const clearForm = () => {
   amountInputElement.value = '';
 }
 
+function renderExpense(data) {
+  let html = `
+    <div class="align-div"><ul>Sl. No</ul></div>
+    <div class="align-div"><ul>Title</ul></div>
+    <div class="align-div"><ul>Amount</ul></div>
+    <div class="align-div"><ul>Action</ul></div>
+  `;
 
-function renderExpense(data) { 
-  let html = `<div class="align-div">
-    <ul>Sl. No</ul>
-  </div>
-  <div class="align-div">
-    <ul>Name of the Budget</ul>
-  </div>
-  <div class="align-div">
-    <ul>Price</ul>
-  </div>
-  <div class="align-div">
-    <ul>Action</ul>
-  </div>`;
-  console.log(data);
-  data.forEach((e,index) => {
-    html += `<div class="align-div">
-    <ul>${index + 1}</ul>
-  </div>
-  <div class="align-div">
-    <ul>${e.title}</ul>
-  </div>
-  <div class="align-div">
-    <ul>${e.amount}</ul>
-  </div>
-  <div class="align-div">
-    <ul>
-      <button onclick="localStorage.clear();" class="delete-button"> Delete</button>
-    </ul>
-  </div>`
+  data.forEach((e, index) => {
+    html += `
+      <div class="align-div"><ul>${index + 1}</ul></div>
+      <div class="align-div"><ul>${e.title}</ul></div>
+      <div class="align-div"><ul>${e.amount}</ul></div>
+      <div class="align-div">
+        <ul>
+          <button class="delete-button" data-id="${e.id}">Delete</button>
+        </ul>
+      </div>`;
   });
+
   expenseList.innerHTML = html;
+
+  document.querySelectorAll('.delete-button').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const id = Number(e.target.dataset.id);
+      removeExpense(id);
+      renderExpense(getExpenses());
+      saveToStorage(getExpenses());
+    });
+  });
 }
 
 

@@ -1,23 +1,20 @@
-let data = [];
+let expenses = [];
 
-const addExpense = ( title, amount ) => {
-  data.push({title, amount});
-  console.log(data);
-}
+const addExpense = (title, amount) => {
+  expenses.push({ id: Date.now(), title, amount });
+  console.log(expenses);
+};
 
-const removeExpenses = (title) => {
-  const expenseToRemove = data.indexOf(tit)
-  data.forEach((e)=>{
-    if(e.title == title){
-      data.splice(expenseToRemove, 1);
-    }
-  })
-}
+const removeExpense = (id) => {
+  expenses = expenses.filter((exp) => {
+    exp.id !== id
+  });
+};
 
+const getExpenses = () => expenses;
 
+const setExpenses = (dataFromStorage) => {
+  expenses = dataFromStorage;
+};
 
-const getExpenses = () => {
-  return data;
-}
-
-export { data, addExpense, removeExpenses, getExpenses };
+export { addExpense, removeExpense, getExpenses, setExpenses };
