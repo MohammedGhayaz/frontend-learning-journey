@@ -55,7 +55,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (May 15, Thu): Project - Add core features (add/delete tasks)
 - [ ] Day 7 (May 16, Fri): Project - Complete app, upload to GitHub, review modules/storage
 
-## Week 7 Schedule: Advanced JavaScript - Closures and Error Handling (May 17 - May 23, 2025)
+## Week 7: Advanced JavaScript - Closures and Error Handling (May 17 - May 23, 2025)
 - [ ] Day 1 (May 17, Sat): Closures - Basic concepts and examples
 - [ ] Day 2 (May 18, Sun): Closures - Practice practical use cases
 - [ ] Day 3 (May 19, Mon): Error handling - Try/catch basics
@@ -121,7 +121,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 6 (May 15, Thu): Project - Add core features (add/delete tasks)
 - [x] Day 7 (May 16, Fri): Project - Complete app, upload to GitHub, review modules/storage
 
-## Week 7 Schedule: Advanced JavaScript - Closures and Error Handling (May 17 - May 23, 2025)
+## Week 7: Advanced JavaScript - Closures and Error Handling (May 17 - May 23, 2025)
 - [x] Day 1 (May 17, Sat): Closures - Basic concepts and examples
 
 
