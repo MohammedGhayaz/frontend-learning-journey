@@ -123,6 +123,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 
 ## Week 7: Advanced JavaScript - Closures and Error Handling (May 17 - May 23, 2025)
 - [x] Day 1 (May 17, Sat): Closures - Basic concepts and examples
+- [x] Day 2 (May 18, Sun): Closures - Practice practical use cases
 
 
 ## Progress Log
