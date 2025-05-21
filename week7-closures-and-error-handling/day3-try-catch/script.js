@@ -9,5 +9,5 @@ try{
   console.log(safeDivide(4,0));
 }
 catch(err){
-  console.log(err);
+  console.log(err.message);
 }
