@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function convertLength(length, from, to){
+      // 1m = 1.6km
+      let calculation = '';
+      if(from == 'mi' && to == 'km'){
+        calculation = length + (length*0.60);
+        console.log(calculation);
+      }
+      else if(from == 'km' && to == 'mi'){
+        calculation = length / 1.6;
+        console.log(calculation);
+      }
+      else if(from = 'km' && to == 'km'){
+        console.log(length);
+      }
+      else{
+        console.log('Invalid unit');
+      }
+    }
+  </script>
+</body>
+</html>
