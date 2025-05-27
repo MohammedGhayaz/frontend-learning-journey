@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+  <div class="container">
+    <button onclick="playGame('rock')">Rock</button>
+    <button onclick="playGame('paper')">Paper</button>
+    <button onclick="playGame('scissor')">Scissor</button>
+  </div>
+
+  <script>
+    function getComputerMove(){
+      const randomNumber = Math.random()
+      let computerMove = '';
+
+      if(randomNumber>0 && randomNumber<=0.3){
+       computerMove = 'rock';
+      }
+      else if(randomNumber>0.3 && randomNumber<=0.6){
+       computerMove = 'paper';
+      }
+      else if(randomNumber>0.6){
+       computerMove = 'scissor';
+      }
+      
+      return computerMove;
+    }
+
+    function playGame(playerMove){
+      const computerMove = getComputerMove();
+      let result = '';
+      const score = {
+        wins:0,
+        losses:0,
+        ties:0
+      };
+      if(playerMove === 'rock'){
+        if(computerMove ==='rock'){
+          score.ties++;
+          result = 'Tie';
+        }
+        else if(computerMove === 'paper'){
+          score.losses++;
+          result = 'Lost';
+        }
+        else{
+          score.wins++;
+          result = 'Win';
+        }
+      }
+      else if(playerMove === 'paper'){
+        if(computerMove ==='rock'){
+          score.wins++;
+          result = 'Win';
+        }
+        else if(computerMove === 'paper'){
+          score.ties++;
+          result = 'Tie';
+        }
+        else{
+          score.losses++;
+          result = 'Lost';
+        }
+      }
+      else if(playerMove === 'scissor'){
+        if(computerMove ==='rock'){
+          score.losses++;
+          result = 'Lost';
+        }
+        else if(computerMove === 'paper'){
+          score.wins++;
+          result = 'Win';
+        }
+        else{
+          score.ties++;
+          result = 'Tie';
+        }
+      }
+
+      alert(`You choosed ${playerMove} - Computer choosed ${computerMove} - You ${result}
+Score: Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+    }
+  </script>
+</body>
+</html>
