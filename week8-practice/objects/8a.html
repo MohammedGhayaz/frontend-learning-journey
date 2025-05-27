@@ -42,6 +42,41 @@
     }
     
     console.log(comparePrice(product1,product2));
+
+    //Excercise 8e
+    
+    const comparingProduct1 = {
+      name: 'product1',
+      price: 100
+    };
+    const comparingProduct2 = {
+      name: 'product1',
+      price: 100
+    };
+
+    function compareProducts(comparingProduct1,comparingProduct2){
+      if(comparingProduct1.name === comparingProduct2.name && comparingProduct1.price === comparingProduct2.price){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+
+    console.log(compareProducts(comparingProduct1, comparingProduct2));
+
+
+    //Excercise 8f
+
+    const message = 'Good Morning';
+
+    console.log(message.toLowerCase());
+
+    //Excercise 8g
+
+    const testMessage = 'test';
+
+    console.log(testMessage.repeat(2));
     
   </script>
 </body>
