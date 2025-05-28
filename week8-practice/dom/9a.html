@@ -14,6 +14,13 @@
   <button class="tails-button">Tails</button>
 
   <p class="display-paragraph"></p>
+
+
+  <div>
+    <input placeholder="Enter your name here" type="text">
+    <button class="submit-button">Submit</button>
+    <p class="display-paragraph2"></p>
+  </div>
   <script>
     //Excercise 9a
     const buttonElement = document.querySelector('button');
@@ -35,6 +42,40 @@
       paraElement.innerHTML = 'You choose: Tails';
     })
 
+    //Excercise 9d
+    const submitButton = document.querySelector('.submit-button');
+    const inputElement = document.querySelector('input')
+    const paraElement2 = document.querySelector('.display-paragraph2');
+
+    // submitButton.addEventListener('click', ()=>{
+    //   const name = inputElement.value;
+    //   paraElement2.innerHTML = `Your name is: ${name}`;
+    //   inputElement.value = '';
+    // })
+
+    // //Excercise 9e
+
+    // inputElement.addEventListener('keypress', (e)=>{
+    //   if(e.key === 'Enter'){
+    //   const name = inputElement.value;
+    //   paraElement2.innerHTML = `Your name is: ${name}`;
+    //   inputElement.value = '';
+    //   }
+    // })
+
+    // Excercise 9f
+
+    function handleEvents(){
+      const name = inputElement.value;
+      paraElement2.innerHTML = `Your name is: ${name}`;
+      inputElement.value = '';
+    }
+    submitButton.addEventListener('click', handleEvents)
+    inputElement.addEventListener('keypress', (e)=>{
+      if(e.key === 'Enter'){
+        handleEvents();
+      }
+    })
 
   </script>
 </body>
