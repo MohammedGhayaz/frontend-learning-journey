@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="button">9b</button>
+  <p>  </p>
+
+  <button class="head-button">Heads</button>
+  <button class="tails-button">Tails</button>
+
+  <p class="display-paragraph"></p>
+  <script>
+    //Excercise 9a
+    const buttonElement = document.querySelector('button');
+    console.log(buttonElement);
+
+    //Excercise 9b
+    const buttonElement2 = document.querySelector('.button');
+    buttonElement2.innerHTML = '9b done!';
+
+    //Excercise 9c
+    const headButton = document.querySelector('.head-button');
+    const tailsButton = document.querySelector('.tails-button');
+    const paraElement = document.querySelector('.display-paragraph');
+
+    headButton.addEventListener('click',()=>{
+      paraElement.innerHTML = 'You choose: Heads';
+    })
+    tailsButton.addEventListener('click',()=>{
+      paraElement.innerHTML = 'You choose: Tails';
+    })
+
+
+  </script>
+</body>
+</html>
