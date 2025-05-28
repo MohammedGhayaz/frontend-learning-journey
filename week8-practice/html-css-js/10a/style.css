@@ -1,0 +1,45 @@
+/* Excercise 10a */
+.amazon-button{
+  background-color: rgb(255, 216, 20);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+
+/* Excercise 10b */
+
+.uber-button{
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.button{
+  background-color: rgb(230, 230, 230);
+  color: black;
+}
+
+.js-gaming-button{
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem;
+}
+
+.is-toggled{
+  color: white;
+  background-color: black;
+}
