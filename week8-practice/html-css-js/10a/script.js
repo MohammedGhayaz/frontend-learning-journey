@@ -22,4 +22,7 @@ gamingButton.forEach((button)=>{
 })
 
 
+const myArray = [10,20,30,50];
+
+
 
