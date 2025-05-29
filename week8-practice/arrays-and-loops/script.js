@@ -29,3 +29,22 @@ for(let i=0;i<array.length;i++){
 }
 return swappedArray;
 }
+
+//Excercise 11d
+
+for(let i=0; i<=10; i=i+2){
+  console.log(i);
+}
+
+//Excercise 11e
+
+for(let i=5; i>=0; i--){
+  console.log(i);
+}
+
+//Excercise 11e
+console.log('Excercise 11e');
+
+for(const element of [0,1,2]){
+  console.log(element + 1);
+}
