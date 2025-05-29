@@ -42,15 +42,15 @@ for(let i=5; i>=0; i--){
   console.log(i);
 }
 
-//Excercise 11e
-console.log('Excercise 11e');
+//Excercise 11f
+console.log('Excercise 11f');
 
 for(const element of [0,1,2]){
   console.log(element + 1);
 }
 
-//Excercise 11f
-console.log('Excercise 11f');
+//Excercise 11g
+console.log('Excercise 11g');
 
 function addArray(arr){
  const newArray =[];
@@ -59,8 +59,8 @@ function addArray(arr){
   });
   return newArray;
 }
-//Excercise 11g
-console.log('Excercise 11g');
+//Excercise 11i
+console.log('Excercise 11i');
 
 function addArray(arr, num){
  const newArray =[];
@@ -72,7 +72,7 @@ function addArray(arr, num){
 console.log(addArray([10,22], 5));
 
 
-//Excercise 11h
+//Excercise 11j
 
 function addArrays(array1,array2){
   let addedArray = [];
@@ -101,4 +101,16 @@ function addArrays(array1,array2){
 return addedArray;
 }
 
+
+//Excercise 11k
+
+function countPositive(nums){
+  let count =0;
+  nums.forEach(e=>{
+    if(e>0){
+      count++
+    }
+  })
+  return count;
+}
 
