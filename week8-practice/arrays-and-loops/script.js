@@ -106,11 +106,13 @@ return addedArray;
 
 function countPositive(nums){
   let count =0;
-  nums.forEach(e=>{
-    if(e>0){
-      count++
+  nums.forEach(element=>{
+    if(element>0){
+      count++;
     }
   })
   return count;
 }
+
+
 
