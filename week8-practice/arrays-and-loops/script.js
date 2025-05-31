@@ -114,5 +114,34 @@ function countPositive(nums){
   return count;
 }
 
+// Excercise 11l
+
+function MinMax(nums){
+ let obj = {
+  min:0,
+  max:0
+ };
+
+ if(nums.length === 0){
+  obj.min = null;
+  obj.max = null;
+ }
+ if(nums.length === 1){
+  obj.min = nums[0];
+  obj.max = nums[0];
+ }
+ if(nums.length > 1){
+  for(let i=0;i<nums.length;i++){
+   if(nums[i]<obj.min){
+    obj.min = nums[i];
+   }
+   if(nums[i]> obj.max){
+    obj.max = nums[i];
+   }
+  }
+ }
+return obj;
+}
+
 
 
