@@ -114,10 +114,10 @@ function countPositive(nums){
   return count;
 }
 
-// Excercise 11l
+// Excercise 11l and 11m
 
 function MinMax(nums){
- let obj = {
+ const obj = {
   min:0,
   max:0
  };
@@ -143,5 +143,21 @@ function MinMax(nums){
 return obj;
 }
 
+// Excercise 11n
+
+function countWords(words){
+const result = {};
+
+for(let i=0;i<words.length;i++){
+  const word = words[i];
+  if(!result[word]){
+    result[word] = 1;
+  }
+  else{
+    result[word]++;
+  }
+}
+return result;
+}
 
 
