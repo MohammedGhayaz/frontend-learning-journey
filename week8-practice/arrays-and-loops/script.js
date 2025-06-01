@@ -195,4 +195,22 @@ function findIndex(array, word){
   return index;
 }
 
+// Excercise 11r,11s,11t
+
+function removeEgg(foods){
+  foods = foods.reverse();
+  let count = 2;
+  let filteredArray = [];
+  for(let i=0; i<foods.length;i++){
+    if(count>0){
+      if(foods[i] === 'egg'){
+        count--;
+        continue;
+      }
+    }
+    filteredArray.push(foods[i]);
+  }
+  return filteredArray.reverse();
+}
+
 
