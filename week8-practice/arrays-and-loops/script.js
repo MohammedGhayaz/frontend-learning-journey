@@ -160,4 +160,39 @@ for(let i=0;i<words.length;i++){
 return result;
 }
 
+// Excercise 11o
+let temp = -1;
+['hello','world','search','good'].forEach((string, index)=>{
+  if(string === 'search'){
+    temp = index;
+  }
+})
+console.log(temp);
+
+
+//Excercise 11p
+const arr = ['hello','search','world','search','good']
+let index = -1;
+
+for(let i=0; i<arr.length ; i++){
+  if(arr[i]==='search'){
+    index = i;
+    break;
+  }
+}
+console.log(index);
+
+
+// Excercise 11q
+function findIndex(array, word){
+  let index = -1;
+  for(let i=0; i<array.length;i++){
+    if(array[i]===word){
+      index = i;
+      break;
+    }
+  }
+  return index;
+}
+
 
