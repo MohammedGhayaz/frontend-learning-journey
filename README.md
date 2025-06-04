@@ -65,6 +65,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 7 (May 23, Fri): Practice - Enhance app, upload to GitHub
 
 ## Practice Week ( May 25 - May 31, 2025 )
+## Practice Week ( June 04 - June 10, 2025 )
 
 
 ## Progress Log
@@ -138,3 +139,4 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - Week 4 Conpleted: May 02, 2025 - Asynchronous JavaScript
 - Week 5 Completed: May 9, 2025 - Fetch API and Project
 - Week 6 Completed: May 16, 2025 - JavaScript Modules and Local Storage
+- Week 7 Completed: May 31, 2025 - Solved Excercises of Javascript Concepts
