@@ -127,6 +127,8 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 2 (May 18, Sun): Closures - Practice practical use cases
 
 ## Practice Week ( May 25 - May 31, 2025 )
+## Practice Week ( June 04 - June 10, 2025 )
+
 
 ## Progress Log
 - Started: April 5, 2025
