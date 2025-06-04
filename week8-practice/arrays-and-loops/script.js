@@ -189,7 +189,7 @@ function findIndex(array, word){
   for(let i=0; i<array.length;i++){
     if(array[i]===word){
       index = i;
-      break;
+      return index;
     }
   }
   return index;
@@ -213,4 +213,35 @@ function removeEgg(foods){
   return filteredArray.reverse();
 }
 
+// Excercise 11u
+function fizzBuzz(){
+  for(let i=1;i<=20;i++){
+    if(i%3===0 && i%5===0){
+      console.log('FizzBuzz');
+    }
+    else if(i%3===0){
+      console.log('Fizz');
+    }
+    else if(i%5===0){
+      console.log('Buzz');
+    }
+    else{
+      console.log(i);
+    }
+  }
+}  
 
+  // Excercise 11v
+
+  function unique(array){
+    const result = [];
+    for(let i=0;i<array.length;i++){
+      const wrd = array[i];
+      if(findIndex(arr,wrd) === -1){
+        result.push(wrd);
+      }
+    }
+    return result;
+  }
+
+  console.log(unique(['green', 'red', 'blue', 'red']));
