@@ -40,7 +40,7 @@ products.forEach( product => {
 
   <div class="product-spacer"></div>
 
-  <div class="added-to-cart">
+  <div class="added-to-cart js-added-to-cart-${product.id}">
     <img src="images/icons/checkmark.png">
     Added
   </div>
@@ -75,11 +75,24 @@ document.querySelectorAll('.js-add-to-cart')
       });
     }
     updateCartQuantity();
+    blinkAddToCartMessage(productId);
+    
     console.log(cart);
   })
- });
+});
+let TimeoutId;
+function blinkAddToCartMessage(productId){
+  document.querySelector(`.js-added-to-cart-${productId}`)
+  .classList.add('visible-added-to-cart');
+  if(TimeoutId){
+    clearTimeout(TimeoutId);
+    }
+  TimeoutId = setTimeout(()=>{
+    document.querySelector(`.js-added-to-cart-${productId}`)
+    .classList.remove('visible-added-to-cart');
+  },2000)
+}
 
- 
  function updateCartQuantity(){
   let cartQuantity = 0;
   cart.forEach((item)=>{
