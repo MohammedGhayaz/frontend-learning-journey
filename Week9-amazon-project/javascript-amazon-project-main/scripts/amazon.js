@@ -1,5 +1,7 @@
-import { cart } from "../data/cart.js";
+import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
+
+
 let productsHtml = '';
 
 products.forEach( product => {
@@ -55,45 +57,15 @@ products.forEach( product => {
 
 document.querySelector('.js-product-container').innerHTML = productsHtml;
 
-
 document.querySelectorAll('.js-add-to-cart')
-.forEach((cartButton)=>{
+  .forEach((cartButton)=>{
   cartButton.addEventListener('click',()=>{
     const productId = cartButton.dataset.productId;
-    let matchingItem;
-    cart.forEach((cartItem) => {
-      if(cartItem.productId === productId){
-        matchingItem = cartItem;
-      }
-    })
-
-    if(matchingItem){
-      matchingItem.quantity += Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
-    }
-    else{
-      cart.push({
-        productId,
-        quantity: Number(document.querySelector(`.js-quantity-selector-${productId}`).value),
-      });
-    }
+    addToCart(productId);
     updateCartQuantity();
     blinkAddToCartMessage(productId);
-    
-    console.log(cart);
-  })
-});
-let TimeoutId;
-function blinkAddToCartMessage(productId){
-  document.querySelector(`.js-added-to-cart-${productId}`)
-  .classList.add('visible-added-to-cart');
-  if(TimeoutId){
-    clearTimeout(TimeoutId);
-    }
-  TimeoutId = setTimeout(()=>{
-    document.querySelector(`.js-added-to-cart-${productId}`)
-    .classList.remove('visible-added-to-cart');
-  },2000)
-}
+  })})
+
 
  function updateCartQuantity(){
   let cartQuantity = 0;
