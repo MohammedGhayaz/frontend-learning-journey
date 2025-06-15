@@ -66,6 +66,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 
 ## Practice Week ( May 25 - May 31, 2025 )
 ## Practice Week ( June 04 - June 10, 2025 )
+## Amazon Project ( June 15 - June 21, 2025)
 
 
 ## Progress Log
@@ -129,6 +130,7 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 
 ## Practice Week ( May 25 - May 31, 2025 )
 ## Practice Week ( June 04 - June 10, 2025 )
+## Amazon Project ( June 15 - June 21, 2025)
 
 
 ## Progress Log
