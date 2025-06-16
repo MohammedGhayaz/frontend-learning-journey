@@ -1,6 +1,7 @@
 import {cart, removeFromCart, saveToStorage } from '../data/cart.js';
 import { products } from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
+import { updateCartQuantity } from './utils/updateCartQuantity.js';
 
 let cartSummaryHTML = '';
 
@@ -101,6 +102,8 @@ document.querySelectorAll('.js-delete-link')
       const container = document.querySelector(`.js-cart-item-container-${productId}`);
       container.remove();
       saveToStorage();
+      updateCartQuantity(cart, 'js-checkout-header');
     })
   })
+  updateCartQuantity(cart, 'js-checkout-header');
 
