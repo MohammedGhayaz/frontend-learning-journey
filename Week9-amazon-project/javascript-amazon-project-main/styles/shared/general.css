@@ -83,6 +83,16 @@ input, select, button {
   color: rgb(196, 80, 0);
 }
 
+.quantity-input{
+  display: none;
+  width: 30px;
+}
+
+.save-link{
+  display: none;
+}
+
+
 /* Styles for dropdown selectors. */
 select {
   color: rgb(33, 33, 33);

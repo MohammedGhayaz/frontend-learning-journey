@@ -57,3 +57,13 @@ export function removeFromCart(productId){
 export function saveToStorage(){
 localStorage.setItem('cart',JSON.stringify(cart))
 }
+
+export function updateCartQuantity(productId, newQuantity){
+  let matchingItem;
+      cart.forEach((cartItem) => {
+        if(cartItem.productId === productId){
+          matchingItem = cartItem;
+          matchingItem.quantity = newQuantity;
+        }
+      })
+}

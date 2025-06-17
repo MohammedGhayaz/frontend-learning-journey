@@ -1,7 +1,7 @@
 import { cart, addToCart, blinkAddToCartMessage } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
-import { updateCartQuantity } from "./utils/updateCartQuantity.js";
+import { renderCartQuantity } from "./utils/renderCartQuantity.js";
 
 let productsHtml = '';
 
@@ -57,7 +57,7 @@ products.forEach( product => {
 });
 
 document.querySelector('.js-product-container').innerHTML = productsHtml;
-updateCartQuantity(cart,'js-cart-quantity');
+renderCartQuantity(cart,'js-cart-quantity');
 
 
 
@@ -67,5 +67,5 @@ document.querySelectorAll('.js-add-to-cart')
     const productId = cartButton.dataset.productId;
     addToCart(productId);
     blinkAddToCartMessage(productId);
-    updateCartQuantity(cart,'js-cart-quantity');
+    renderCartQuantity(cart,'js-cart-quantity');
   })})

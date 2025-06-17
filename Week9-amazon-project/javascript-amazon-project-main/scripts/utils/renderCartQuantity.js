@@ -1,4 +1,4 @@
-export function updateCartQuantity(cart, classString){
+export function renderCartQuantity(cart, classString){
   let cartQuantity = 0;
   cart.forEach((item)=>{
     cartQuantity += item.quantity;
