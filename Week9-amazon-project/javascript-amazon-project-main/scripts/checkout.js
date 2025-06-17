@@ -128,14 +128,19 @@ document.querySelectorAll('.js-save-link')
       const container = document.querySelector(`.js-cart-item-container-${productId}`);
       const newQuantity = Number(document.querySelector(`.js-new-quantity-${productId}`).value);
       if(!newQuantity){
+        document.querySelector(`.js-new-quantity-${productId}`).value = '';
         alert('Enter the quantity to update');
         return;
       }
       container.classList.remove('is-editing-quantity');
-      console.log(productId);
-      updateCartQuantity(productId, newQuantity);
-      saveToStorage();
-      renderCartSummary();
+      if(newQuantity > 0 && newQuantity <=500){
+        updateCartQuantity(productId, newQuantity);
+        saveToStorage();
+        renderCartSummary();
+      }
+      else{
+        alert('Minimum 1 Quantity and Maximum 500 quantity is only allowed');
+      }
     })
   })
 }
