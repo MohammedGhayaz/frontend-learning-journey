@@ -2,7 +2,7 @@ import { cart } from "../../data/cart.js"
 import { renderCartQuantity } from "../utils/renderCartQuantity.js"
 import { getProducts, products } from "../../data/products.js"
 import {formatCurrency} from '../utils/money.js'
-import { deliveryOptions } from "../../data/deliveryOptions.js"
+import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOptions.js"
 
 
 
@@ -17,12 +17,9 @@ export function renderPaymentSummary(){
     const productPriceCents = product.priceCents;
     totalProductsPrice += productPriceCents*cartItem.quantity;
 
-    deliveryOptions.forEach((deliveryOption) => {
-      if(cartItem.deliveryOptionId === deliveryOption.id){
-        const shippingPrice = deliveryOption.priceCents;
-        totalShippingPrice += shippingPrice;
-      }
-    })
+    const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
+    const shippingPrice = deliveryOption.priceCents;
+    totalShippingPrice += shippingPrice;
     
   });
 
