@@ -4,6 +4,7 @@ import { formatCurrency } from '../utils/money.js';
 import { renderCartQuantity } from '../utils/renderCartQuantity.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
 import { deliveryOptions } from '../../data/deliveryOptions.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 
 
@@ -128,6 +129,7 @@ document.querySelectorAll('.js-delete-link')
       container.remove();
       saveToStorage();
       renderCartQuantity(cart, 'js-checkout-header');
+      renderPaymentSummary();
     })
   })
 
@@ -157,6 +159,7 @@ document.querySelectorAll('.js-save-link')
         updateCartQuantity(productId, newQuantity);
         saveToStorage();
         renderCartSummary();
+        renderPaymentSummary();
       }
       else{
         alert('Minimum 1 Quantity and Maximum 500 quantity is only allowed');
@@ -172,6 +175,7 @@ document.querySelectorAll('.js-save-link')
       updateCartDeliveryOption(deliveryOptionId, productId);
       saveToStorage();
       renderCartSummary();
+      renderPaymentSummary();
     })
   })
   
