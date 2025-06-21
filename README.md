@@ -64,9 +64,8 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [ ] Day 6 (May 22, Thu): Review - Revisit closures and errors, fix practice issues
 - [ ] Day 7 (May 23, Fri): Practice - Enhance app, upload to GitHub
 
-## Practice Week ( May 25 - May 31, 2025 )
-## Practice Week ( June 04 - June 10, 2025 )
-## Amazon Project ( June 15 - June 21, 2025)
+## Practice Week (May 25 - June 10, 2025)
+## Amazon Project (June 15 - June 21, 2025)
 
 
 ## Progress Log
@@ -128,9 +127,8 @@ My roadmap to becoming a front-end developer, starting April 5, 2025.
 - [x] Day 1 (May 17, Sat): Closures - Basic concepts and examples
 - [x] Day 2 (May 18, Sun): Closures - Practice practical use cases
 
-## Practice Week ( May 25 - May 31, 2025 )
-## Practice Week ( June 04 - June 10, 2025 )
-## Amazon Project ( June 15 - June 21, 2025)
+## Practice Week (May 25 - June 10, 2025)
+## Amazon Project (June 15 - June 21, 2025)
 
 
 ## Progress Log
