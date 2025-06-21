@@ -1,5 +1,5 @@
 import {cart, removeFromCart, saveToStorage, updateCartDeliveryOption, updateCartQuantity } from '../../data/cart.js';
-import { products } from '../../data/products.js';
+import { getProducts, products } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
 import { renderCartQuantity } from '../utils/renderCartQuantity.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
@@ -13,12 +13,7 @@ let cartSummaryHTML = '';
 
 cart.forEach((cartItem)=>{
   const productId = cartItem.productId;
-  let matchingProduct;
-  products.forEach((product)=>{
-    if(product.id === productId){
-      matchingProduct = product;
-    }
-  });
+  const matchingProduct = getProducts(productId);
 
   
   let deliveryOption;
