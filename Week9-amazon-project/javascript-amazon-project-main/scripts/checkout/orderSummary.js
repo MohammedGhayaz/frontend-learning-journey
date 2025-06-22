@@ -3,7 +3,7 @@ import { getProducts, products } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
 import { renderCartQuantity } from '../utils/renderCartQuantity.js';
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
-import { deliveryOptions, getDeliveryOption } from '../../data/deliveryOptions.js';
+import { calculateDeliveryDate, deliveryOptions, getDeliveryOption } from '../../data/deliveryOptions.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 
 
@@ -14,17 +14,8 @@ let cartSummaryHTML = '';
 cart.forEach((cartItem)=>{
   const productId = cartItem.productId;
   const matchingProduct = getProducts(productId);
-
   const deliveryOption = getDeliveryOption(cartItem.deliveryOptionId);
-
-  const today = dayjs();
-  const deliveryDate = today.add(
-    deliveryOption.deliveryDays,
-    'days'
-  );
-  const dateString = deliveryDate.format('dddd, MMMM D');
-
-
+  const dateString = calculateDeliveryDate(dayjs, deliveryOption);
 
   cartSummaryHTML += `<div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
       <div class="delivery-date">
@@ -78,12 +69,7 @@ function deliveryOptionsHTML(matchingProduct, cartItem){
   
   deliveryOptions.forEach((deliveryOption)=>{
     const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
-    const today = dayjs();
-    const deliveryDate = today.add(
-      deliveryOption.deliveryDays,
-      'days'
-    );
-    const dateString = deliveryDate.format('dddd, MMMM D');
+    const dateString = calculateDeliveryDate(dayjs, deliveryOption);
     const priceString = deliveryOption.priceCents === 0 ? 'Free -' : `$${formatCurrency(deliveryOption.priceCents)} - `;
 
 
@@ -113,10 +99,9 @@ document.querySelectorAll('.js-delete-link')
     deleteLink.addEventListener('click', ()=>{
       const productId = deleteLink.dataset.productId;
       removeFromCart(productId);
-      const container = document.querySelector(`.js-cart-item-container-${productId}`);
-      container.remove();
       saveToStorage();
       renderCartQuantity(cart, 'js-checkout-header');
+      renderCartSummary();
       renderPaymentSummary();
     })
   })

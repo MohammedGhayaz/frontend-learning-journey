@@ -20,5 +20,14 @@ export function getDeliveryOption(deliveryOptionId){
         if(deliveryOptionId === option.id){
           deliveryOption = option;
         }})
-      return deliveryOption;
+      return deliveryOption || deliveryOptions[0];it
+}
+
+export function calculateDeliveryDate(dayjs, deliveryOption){
+  const today = dayjs();
+  const deliveryDate = today.add(
+    deliveryOption.deliveryDays,
+    'days'
+  );
+  return deliveryDate.format('dddd, MMMM D');
 }
