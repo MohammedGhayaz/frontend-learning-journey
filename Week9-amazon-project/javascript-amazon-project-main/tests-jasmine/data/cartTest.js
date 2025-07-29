@@ -1,7 +1,28 @@
 import { addToCart, cart, loadFromStorage } from "../../data/cart.js";
 
 describe('test suite: addToCart', ()=>{
-  
+  it('adds exisitng product to the cart', ()=>{
+    spyOn(localStorage, 'getItem').and.callFake(()=>{
+      return JSON.stringify([
+        {
+          productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+          quantity: 1,
+          deliveryOptionId: '1'
+        }
+      ]);
+    })
+    loadFromStorage();
+
+    const productId = 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6';
+    const inputElement = document.createElement('input');
+    inputElement.className = `js-quantity-selector-${productId}`;
+    inputElement.value = '1';
+    document.body.appendChild(inputElement);
+
+    addToCart(productId);
+    expect(cart[0].quantity).toBe(2);
+
+    document.body.removeChild(inputElement);
   })
 
   it('adds new product to the cart',()=>{
