@@ -4,6 +4,7 @@ export function renderCartQuantity(cart, classString){
     cartQuantity += item.quantity;
   });
 
+  console.log(classString);
   if(classString){
     if(classString === 'js-checkout-header'){
       document.querySelector(`.${classString}`).innerHTML = `${cartQuantity} items`;
