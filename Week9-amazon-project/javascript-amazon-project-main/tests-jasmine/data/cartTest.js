@@ -1,0 +1,27 @@
+import { addToCart, cart, loadFromStorage } from "../../data/cart.js";
+
+describe('test suite: addToCart', ()=>{
+  
+  })
+
+  it('adds new product to the cart',()=>{
+    spyOn(localStorage, 'getItem').and.callFake(()=>{
+      return JSON.stringify([]);
+    })
+
+    loadFromStorage();
+    
+    const productId = 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6';
+    const inputElement = document.createElement('input');
+    inputElement.className = `js-quantity-selector-${productId}`;
+    inputElement.value = '1';
+    document.body.appendChild(inputElement);
+
+
+    addToCart(productId);
+    expect(cart.length).toEqual(1);
+
+    document.body.removeChild(inputElement);
+    
+  })
+})

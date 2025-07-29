@@ -1,4 +1,9 @@
-export let cart =  JSON.parse(localStorage.getItem('cart')) || [{
+export let cart; 
+
+loadFromStorage();
+
+export function loadFromStorage(){
+cart = JSON.parse(localStorage.getItem('cart')) || [{
   productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
   quantity: 1,
   deliveryOptionId: '1'
@@ -8,9 +13,11 @@ export let cart =  JSON.parse(localStorage.getItem('cart')) || [{
   deliveryOptionId: '2'
 }
 ];
+}
 
 export function addToCart(productId){
-      const selectorValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value)
+      const selectorValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+      console.log(selectorValue);
       let matchingItem;
       cart.forEach((cartItem) => {
         if(cartItem.productId === productId){
