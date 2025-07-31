@@ -78,7 +78,8 @@ describe('test suite: renderCartSummary', ()=>{
       expect(cart.length).toEqual(2);
       expect(cart[0].productId).toEqual(productId1);
       expect(cart[0].deliveryOptionId).toEqual('3');
-
+      expect(document.querySelector('.js-shipping-price').innerText).toEqual('$14.98');
+      expect(document.querySelector('.js-total-price').innerText).toEqual('$74.56');
 
     })
   })
