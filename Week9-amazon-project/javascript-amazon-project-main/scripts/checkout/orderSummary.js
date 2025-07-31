@@ -77,9 +77,10 @@ function deliveryOptionsHTML(matchingProduct, cartItem){
     const priceString = deliveryOption.priceCents === 0 ? 'Free -' : `$${formatCurrency(deliveryOption.priceCents)} - `;
 
 
-   html += `<div class="delivery-option">
+   html += `<div class="delivery-option
+      ">
     <input type="radio" ${isChecked? 'checked' : ''}
-    class="delivery-option-input js-delivery-option-input"
+    class="js-product-${matchingProduct.id} js-delivery-option-${deliveryOption.id} delivery-option-input js-delivery-option-input"
     name="delivery-option-${matchingProduct.id}" 
     data-delivery-option-id="${deliveryOption.id}"
     data-product-id="${matchingProduct.id}">
