@@ -20,7 +20,7 @@ export function getDeliveryOption(deliveryOptionId){
         if(deliveryOptionId === option.id){
           deliveryOption = option;
         }})
-      return deliveryOption || deliveryOptions[0];it
+      return deliveryOption || deliveryOptions[0];
 }
 
 export function calculateDeliveryDate(dayjs, deliveryOption){
@@ -30,4 +30,15 @@ export function calculateDeliveryDate(dayjs, deliveryOption){
     'days'
   );
   return deliveryDate.format('dddd, MMMM D');
+}
+
+export function validDeliveryOption(deliveryOptionId){
+  let found = false;
+
+  deliveryOptions.forEach((option) => {
+    if(deliveryOptionId === option.id){
+      found = true;
+    }
+  })
+  return found;
 }

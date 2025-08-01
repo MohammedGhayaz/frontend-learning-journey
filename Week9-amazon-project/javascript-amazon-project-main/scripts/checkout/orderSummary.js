@@ -151,7 +151,6 @@ document.querySelectorAll('.js-save-link')
     deliveryOptionInput.addEventListener('click', ()=>{
       const {deliveryOptionId, productId} = deliveryOptionInput.dataset;
       updateCartDeliveryOption(deliveryOptionId, productId);
-      saveToStorage();
       renderCartSummary();
       renderPaymentSummary();
     })
