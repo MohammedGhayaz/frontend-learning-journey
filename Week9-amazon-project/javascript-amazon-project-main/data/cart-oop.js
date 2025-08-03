@@ -2,11 +2,11 @@ import { validDeliveryOption } from "./deliveryOptions.js";
 
 function Cart(localStorageKey){
   const cart = {
-    carItems : undefined,
+    cartItems : undefined,
     TimeoutId : undefined,
 
     loadFromStorage(){
-      this.carItems = JSON.parse(localStorage.getItem(localStorageKey)) || [{
+      this.cartItems = JSON.parse(localStorage.getItem(localStorageKey)) || [{
       productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
       quantity: 1,
       deliveryOptionId: '1'
@@ -19,7 +19,7 @@ function Cart(localStorageKey){
 
 
     saveToStorage(){
-        localStorage.setItem(localStorageKey,JSON.stringify(this.carItems))
+        localStorage.setItem(localStorageKey,JSON.stringify(this.cartItems))
     },
 
 
@@ -32,7 +32,7 @@ function Cart(localStorageKey){
         selectorValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
       }
       let matchingItem;
-      this.carItems.forEach((cartItem) => {
+      this.cartItems.forEach((cartItem) => {
         if(cartItem.productId === productId){
             matchingItem = cartItem;
         }
@@ -42,7 +42,7 @@ function Cart(localStorageKey){
         matchingItem.quantity += selectorValue;
       }
       else{
-        this.carItems.push({
+        this.cartItems.push({
           productId,
           quantity: selectorValue,
           deliveryOptionId: '1'
@@ -69,18 +69,18 @@ function Cart(localStorageKey){
     removeFromCart(productId){
       const newCart = [];
     
-      this.carItems.forEach((cartItem)=>{
+      this.cartItems.forEach((cartItem)=>{
         if(productId !== cartItem.productId){
           newCart.push(cartItem);
         }
       })
-      this.carItems = newCart;
+      this.cartItems = newCart;
     },
 
 
     updateCartQuantity(productId, newQuantity){
       let matchingItem;
-      this.carItems.forEach((cartItem) => {
+      this.cartItems.forEach((cartItem) => {
         if(cartItem.productId === productId){
           matchingItem = cartItem;
           matchingItem.quantity = newQuantity;
@@ -114,6 +114,3 @@ cart.loadFromStorage();
 
 const businessCart = Cart('cart-business');
 businessCart.loadFromStorage();
-
-console.log(cart);
-console.log(businessCart);
