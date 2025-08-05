@@ -11,7 +11,7 @@ products.forEach((product) => {
 return matchingProduct;
 }
 
-class Product{
+export class Product{
   id;
   image;
   name;
@@ -40,7 +40,7 @@ class Product{
 }
 
 
-class Clothing extends Product{
+export class Clothing extends Product{
   sizeChartLink;
 
   constructor(productDetails){
@@ -55,7 +55,7 @@ class Clothing extends Product{
   }
 } 
 
-class Appliance extends Product{ 
+export class Appliance extends Product{ 
   instructionsLink;
   warrantyLink;
   constructor(productDetails){

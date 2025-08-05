@@ -83,4 +83,5 @@ describe('test suite: renderCartSummary', ()=>{
 
     })
   })
+  
 })
