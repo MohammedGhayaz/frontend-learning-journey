@@ -47,13 +47,35 @@ class Clothing extends Product{
     super(productDetails);
     this.sizeChartLink = productDetails.sizeChartLink;
   }
-
+  
   extraInfoHTML(){
     return `<a
-     href="${this.sizeChartLink}" target="_blank"> Size Chart
-     </a>`;
+    href="${this.sizeChartLink}" target="_blank"> Size Chart
+    </a>`;
   }
 } 
+
+class Appliance extends Product{ 
+  instructionsLink;
+  warrantyLink;
+  constructor(productDetails){
+    super(productDetails);
+    this.instructionsLink = productDetails.instructionsLink;
+    this.warrantyLink = productDetails.warrantyLink;
+  }
+  
+  extraInfoHTML(){
+    return `<div><a
+    href="${this.instructionsLink}" target="_blank"> Instructions
+    </a></div>
+    <div><a
+    href="${this.warrantyLink}" target="_blank"> Warranty
+    </a></div>`
+    ;
+  }
+}
+  
+
 
 
 export const products = [
@@ -116,7 +138,10 @@ export const products = [
       "toaster",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type: "appliance",
+    instructionsLink: "images/appliance-instructions.png",
+    warrantyLink: "images/appliance-warranty.png"
   },
   {
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
@@ -301,7 +326,10 @@ export const products = [
       "water boiler",
       "appliances",
       "kitchen"
-    ]
+    ],
+    type: "appliance",
+    instructionsLink: "images/appliance-instructions.png",
+    warrantyLink: "images/appliance-warranty.png"
   },
   {
     id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
@@ -666,7 +694,10 @@ export const products = [
       "food blenders",
       "kitchen",
       "appliances"
-    ]
+    ],
+    type: "appliance",
+    instructionsLink: "images/appliance-instructions.png",
+    warrantyLink: "images/appliance-warranty.png"
   },
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
@@ -719,6 +750,11 @@ export const products = [
   if(productDetails.sizeChartLink){
     return new Clothing(productDetails);
   }
-  return new Product(productDetails)
+  else if(productDetails.instructionsLink && productDetails.warrantyLink){
+    return new Appliance(productDetails);
+  }
+  else{
+    return new Product(productDetails)
+  }
 })
 
