@@ -1,4 +1,4 @@
-import {Product, Clothing} from '../../data/products.js'
+import {Product, Clothing, Appliance} from '../../data/products.js'
 import { formatCurrency } from '../../scripts/utils/money.js';
 
 describe('test suite: product class',()=>{
@@ -111,4 +111,64 @@ describe('test suite: clothing class', ()=>{
         expect(clothingProduct.getPrice()).toEqual(`$${formatCurrency(clothingProduct.priceCents)}`)
         expect(clothingProduct.extraInfoHTML()).toContain('Size Chart');
     })
+})
+
+describe('test suite: appliance class', ()=>{
+  let applianceProduct;
+  beforeEach(()=>{
+      applianceProduct = new Appliance({
+        id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
+        image: "images/products/electric-glass-and-steel-hot-water-kettle.webp",
+        name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+        rating: {
+          stars: 5,
+          count: 846
+        },
+        priceCents: 3074,
+        keywords: [
+          "water boiler",
+          "appliances",
+          "kitchen"
+        ],
+        type: "appliance",
+        instructionsLink: "images/appliance-instructions.png",
+        warrantyLink: "images/appliance-warranty.png"
+      })
+  })
+
+  it('generate fields of appliance class', ()=>{
+      expect('id' in applianceProduct).toBe(true);
+      expect('image' in applianceProduct).toBe(true);
+      expect('name' in applianceProduct).toBe(true);
+      expect('rating' in applianceProduct).toBe(true);
+      expect('priceCents' in applianceProduct).toBe(true);
+      expect('instructionsLink' in applianceProduct).toBe(true);
+      expect('warrantyLink' in applianceProduct).toBe(true);
+  })
+
+  it('should initialize appliance class with correct field values', ()=>{
+     
+      expect(applianceProduct.id).toEqual('c2a82c5e-aff4-435f-9975-517cfaba2ece');
+      expect(applianceProduct.image).toEqual('images/products/electric-glass-and-steel-hot-water-kettle.webp');
+      expect(applianceProduct.name).toEqual('Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter');
+      expect(applianceProduct.rating).toEqual({
+              stars: 5,
+              count: 846
+          });
+      expect(applianceProduct.priceCents).toEqual(3074);
+      expect(applianceProduct.instructionsLink).toEqual('images/appliance-instructions.png');
+      expect(applianceProduct.warrantyLink).toEqual('images/appliance-warranty.png');
+  })
+  
+  it('generate methods of appliance class', ()=>{       
+      expect(typeof applianceProduct.getStars).toBe('function');
+      expect(typeof applianceProduct.getPrice).toBe('function');
+      expect(typeof applianceProduct.extraInfoHTML).toBe('function');
+  })
+
+  it('should perform expected actions when appliance methods are called',()=>{
+      expect(applianceProduct.getStars()).toEqual(`images/ratings/rating-${applianceProduct.rating.stars * 10}.png`)
+      expect(applianceProduct.getPrice()).toEqual(`$${formatCurrency(applianceProduct.priceCents)}`)
+      expect(applianceProduct.extraInfoHTML()).toContain('Warranty');
+  })
 })
