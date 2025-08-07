@@ -77,25 +77,47 @@ export class Appliance extends Product{
 
 export let products = [];
 
-export function loadProducts(fun){
-  const xhr = new XMLHttpRequest();
-
-  xhr.addEventListener('load',()=>{
-    products = JSON.parse(xhr.response).map((productDetails)=>{
-      if(productDetails.sizeChartLink){
-        return new Clothing(productDetails);
-      }
-      else if(productDetails.instructionsLink && productDetails.warrantyLink){
-        return new Appliance(productDetails);
-      }
-      else{
-        return new Product(productDetails)
-      }
+export function loadProductsFetch(){
+ return fetch('https://supersimplebackend.dev/products').
+    then((response)=>{
+      return response.json()
     })
-
-    fun();
-  })
-
-  xhr.open('GET', 'https://supersimplebackend.dev/products');
-  xhr.send();
+      .then((productsData)=>{
+        products = productsData.map((productDetails)=>{
+          if(productDetails.sizeChartLink){
+            return new Clothing(productDetails);
+          }
+          else if(productDetails.instructionsLink && productDetails.warrantyLink){
+            return new Appliance(productDetails);
+          }
+          else{
+            return new Product(productDetails)
+          }
+        })
+      })
 }
+
+
+// export function loadProducts(fun){
+
+//   const xhr = new XMLHttpRequest();
+
+//   xhr.addEventListener('load',()=>{
+//     products = JSON.parse(xhr.response).map((productDetails)=>{
+//       if(productDetails.sizeChartLink){
+//         return new Clothing(productDetails);
+//       }
+//       else if(productDetails.instructionsLink && productDetails.warrantyLink){
+//         return new Appliance(productDetails);
+//       }
+//       else{
+//         return new Product(productDetails)
+//       }
+//     })
+
+//     fun();
+//   })
+
+//   xhr.open('GET', 'https://supersimplebackend.dev/products');
+//   xhr.send();
+// }

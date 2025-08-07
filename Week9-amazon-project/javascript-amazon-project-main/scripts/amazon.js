@@ -1,10 +1,12 @@
 import { cart, addToCart, blinkAddToCartMessage } from "../data/cart.js";
-import { loadProducts, products } from "../data/products.js";
+import { loadProductsFetch, products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 import { renderCartQuantity } from "./utils/renderCartQuantity.js";
 
 
-loadProducts(renderProducts);
+loadProductsFetch().then(()=>{
+  renderProducts();
+})
 
 function renderProducts(){
   
