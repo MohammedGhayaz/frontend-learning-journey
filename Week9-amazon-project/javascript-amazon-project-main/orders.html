@@ -186,5 +186,10 @@
         </div>
       </div>
     </div>
+    <script>
+      const url = new URL(window.location.href);
+      const orderId = url.searchParams.get('orderId');
+      console.log(orderId);
+    </script>
   </body>
 </html>
