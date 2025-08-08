@@ -79,8 +79,10 @@ export let products = [];
 
 export async function loadProductsFetch(){
 
-  const response = await fetch('https://supersimplebackend.dev/products');
-  const productsData = await response.json();
+  try{
+
+    const response = await fetch('https://supersimplebackend.dev/products');
+    const productsData = await response.json();
       
   products = productsData.map((productDetails)=>{
     if(productDetails.sizeChartLink){
@@ -93,6 +95,9 @@ export async function loadProductsFetch(){
       return new Product(productDetails)
     }
   })
+}catch(error){
+  console.log('An unexpexted error occured. Please try again later');
+}
 }
 
 
