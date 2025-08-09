@@ -1,9 +1,18 @@
-const xhr = new XMLHttpRequest()
+async function fetchData(){
+ const response = await fetch('https://supersimplebackend.dev/greeting', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      },
+    body:JSON.stringify({
+      'name': 'Ghayaz',
+    })
+ })
 
-xhr.addEventListener('load',()=>{
-  console.log(xhr.response);
-})
+ const greetResponse = await response.text();
+ console.log(greetResponse);
+}
+fetchData();
 
-xhr.open('GET','https://supersimplebackend.dev/');
-xhr.send();
+
 

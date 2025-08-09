@@ -10,3 +10,22 @@ export function addOrder(order){
 function saveToStorage(){
 localStorage.setItem('orders', JSON.stringify(orders));
 }
+
+export function calculateOrderDate(orderDate){
+  const date = new Date(orderDate);
+  const months = 
+  [ 'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+return `${months[date.getMonth()]} ${date.getDate()}`;
+}
