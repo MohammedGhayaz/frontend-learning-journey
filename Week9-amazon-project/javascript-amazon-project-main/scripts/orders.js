@@ -41,7 +41,7 @@ loadProductsFetch().then(()=>{
       ${generateOrdersProductsHTML(orderItem)}
     `
   });
-  console.log(ordersHtml);
+  
   document.querySelector('.js-order-grid').innerHTML = ordersHtml;
   }
 
