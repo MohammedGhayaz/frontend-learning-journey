@@ -1,3 +1,4 @@
+import { addToCart, blinkAddToCartMessage } from '../data/cart.js';
 import {calculateOrderDate, orders} from '../data/orders.js';
 import { getProducts, loadProductsFetch} from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
@@ -36,13 +37,19 @@ loadProductsFetch().then(()=>{
           <div>${orderItem.id}</div>
         </div>
       </div>
-
-      
+  
       ${generateOrdersProductsHTML(orderItem)}
     `
   });
   
   document.querySelector('.js-order-grid').innerHTML = ordersHtml;
+  document.querySelectorAll('.js-buy-it-again-button').forEach((button)=>{
+    button.addEventListener('click',()=>{
+      const {productId} = button.dataset;
+      addToCart(productId);
+      blinkAddToCartMessage(productId);
+    })
+  })
   }
 
   function generateOrdersProductsHTML(orderItem){
@@ -69,10 +76,15 @@ loadProductsFetch().then(()=>{
             <div class="product-quantity">
               Quantity: ${orderProduct.quantity}
             </div>
-            <button class="buy-again-button button-primary">
+            <button class="buy-again-button button-primary js-buy-it-again-button"
+              data-product-id="${matchingProduct.id}">
               <img class="buy-again-icon" src="images/icons/buy-again.png">
               <span class="buy-again-message">Buy it again</span>
             </button>
+            <div class="added-to-cart js-added-to-cart-${matchingProduct.id}">
+              <img src="images/icons/checkmark.png">
+              Added
+            </div>
           </div>
 
           <div class="product-actions">
@@ -81,6 +93,7 @@ loadProductsFetch().then(()=>{
                 Track package
               </button>
             </a>
+           
           </div>
         </div>
       </div>`

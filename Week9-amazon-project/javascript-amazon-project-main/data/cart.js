@@ -15,7 +15,10 @@ cart = JSON.parse(localStorage.getItem('cart')) || [];
 }
 
 export function addToCart(productId){
-      const selectorValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+    let selectorValue = 1;
+    if(document.querySelector(`.js-quantity-selector-${productId}`)){
+      selectorValue = Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+    }
       let matchingItem;
       cart.forEach((cartItem) => {
         if(cartItem.productId === productId){
