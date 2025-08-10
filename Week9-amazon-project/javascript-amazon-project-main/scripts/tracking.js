@@ -1,6 +1,9 @@
+import { cart } from "../data/cart.js";
 import { calculateOrderDate} from "../data/orders.js";
 import { getProducts, loadProductsFetch } from "../data/products.js";
 import { getOrderDay, getOrderProduct, trackShipment } from "../data/tracking.js";
+import { renderCartQuantity } from "./utils/renderCartQuantity.js";
+
 
 
 
@@ -74,4 +77,5 @@ loadProductsFetch().then(()=>{
  
 
   renderTrackingPage();   
+  renderCartQuantity(cart,'js-cart-quantity');
 })

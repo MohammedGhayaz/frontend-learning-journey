@@ -1,7 +1,8 @@
-import { addToCart, blinkAddToCartMessage } from '../data/cart.js';
+import { addToCart, blinkAddToCartMessage, cart } from '../data/cart.js';
 import {calculateOrderDate, orders} from '../data/orders.js';
 import { getProducts, loadProductsFetch} from '../data/products.js';
 import { formatCurrency } from './utils/money.js';
+import { renderCartQuantity } from './utils/renderCartQuantity.js';
 
 loadProductsFetch().then(()=>{
 
@@ -100,6 +101,7 @@ loadProductsFetch().then(()=>{
       </div>`
     });
 
+    renderCartQuantity(cart,'js-cart-quantity');
     return ordersHtml;
   }
 
