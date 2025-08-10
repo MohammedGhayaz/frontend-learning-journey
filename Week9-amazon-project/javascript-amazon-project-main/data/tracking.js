@@ -1,4 +1,17 @@
-import { orders } from "./orders.js";
+import { getDayOfMonth } from "../scripts/utils/getDate.js";
+import { getOrder, orders } from "./orders.js";
+
+export function trackShipment(orderId, deliveryDate){
+  const order = getOrder(orderId);
+
+  const currentTime = getDayOfMonth(new Date());
+  const orderTime = getDayOfMonth(order.orderTime);
+  const deliveryTime = getDayOfMonth(deliveryDate);
+
+  const progress = (((currentTime - orderTime)/(deliveryTime - orderTime))*100).toFixed(2);
+  return progress;
+}
+
 
 export function getOrderProduct(orderId, productId){
   let matchingOrderProduct;
