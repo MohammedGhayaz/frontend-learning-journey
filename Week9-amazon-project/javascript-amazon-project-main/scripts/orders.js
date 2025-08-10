@@ -15,41 +15,42 @@ loadProductsFetch().then(()=>{
 
 
   function renderOrders(){
-  let ordersHtml= '';
+    let ordersHtml= '';
 
-  orders.forEach((orderItem) =>{
-    ordersHtml += `
-    <div class="order-container">
-      <div class="order-header">
-        <div class="order-header-left-section">
-          <div class="order-date">
-            <div class="order-header-label">Order Placed:</div>
-            <div>${calculateOrderDate(orderItem.orderTime)}</div>
+    orders.forEach((orderItem) =>{
+      ordersHtml += `
+      <div class="order-container">
+        <div class="order-header">
+          <div class="order-header-left-section">
+            <div class="order-date">
+              <div class="order-header-label">Order Placed:</div>
+              <div>${calculateOrderDate(orderItem.orderTime)}</div>
+            </div>
+            <div class="order-total">
+              <div class="order-header-label">Total:</div>
+              <div>$${formatCurrency(orderItem.totalCostCents)}</div>
+            </div>
           </div>
-          <div class="order-total">
-            <div class="order-header-label">Total:</div>
-            <div>$${formatCurrency(orderItem.totalCostCents)}</div>
+
+          <div class="order-header-right-section">
+            <div class="order-header-label">Order ID:</div>
+            <div>${orderItem.id}</div>
           </div>
         </div>
-
-        <div class="order-header-right-section">
-          <div class="order-header-label">Order ID:</div>
-          <div>${orderItem.id}</div>
-        </div>
-      </div>
+    
+        ${generateOrdersProductsHTML(orderItem)}
+      `
+    });
   
-      ${generateOrdersProductsHTML(orderItem)}
-    `
-  });
-  
-  document.querySelector('.js-order-grid').innerHTML = ordersHtml;
-  document.querySelectorAll('.js-buy-it-again-button').forEach((button)=>{
-    button.addEventListener('click',()=>{
-      const {productId} = button.dataset;
-      addToCart(productId);
-      blinkAddToCartMessage(productId);
+    document.querySelector('.js-order-grid').innerHTML = ordersHtml;
+    document.querySelectorAll('.js-buy-it-again-button').forEach((button)=>{
+      button.addEventListener('click',()=>{
+        const {productId} = button.dataset;
+        addToCart(productId);
+        blinkAddToCartMessage(productId);
+        window.location.href = 'checkout.html'
+      })
     })
-  })
   }
 
   function generateOrdersProductsHTML(orderItem){
@@ -88,7 +89,7 @@ loadProductsFetch().then(()=>{
           </div>
 
           <div class="product-actions">
-            <a href="tracking.html?${orderItem.id}&${matchingProduct.id}">
+            <a href="tracking.html?orderId=${orderItem.id}&productId=${matchingProduct.id}">
               <button class="track-package-button button-secondary">
                 Track package
               </button>
