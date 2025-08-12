@@ -25,11 +25,16 @@
         );
       }
 
-      function ChatMessage(){
+      function ChatMessage({sender, message}){
         return (
           <div>
-            hello Chatbot 
-            <img src="./images/user.png" width= "60" />
+            {sender==='user' && message}
+            {
+              sender ==='user' ?
+              <img src="./images/user.png" width= "60" /> :
+              <img src="./images/robot.png" width= "60" />
+            }
+            {sender === 'robot' && message}
           </div>
         )
       }
@@ -37,9 +42,10 @@
       const app = (
         <>
           <ChatInput />
-          <ChatMessage />
-          <ChatMessage />
-          <ChatMessage />
+          <ChatMessage sender="user" message="Hello Chatbot" />
+          <ChatMessage sender="robot" message="Hi. Please let me know how can i help you?" />
+          <ChatMessage sender="user" message="What is the day today" />
+          <ChatMessage sender="robot" message="Today is Wednesday"/>
         </>
       )
 
