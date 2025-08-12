@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      
+      function ChatInput() {
+        return (
+          <>
+            <input 
+              placeholder="Send a message to Chatbot" 
+              size="30"
+            />
+            <button> Send message </button>
+          </>
+        );
+      }
+
+      function ChatMessage(){
+        return (
+          <div>
+            hello Chatbot 
+            <img src="./images/user.png" width= "60" />
+          </div>
+        )
+      }
+
+      const app = (
+        <>
+          <ChatInput />
+          <ChatMessage />
+          <ChatMessage />
+          <ChatMessage />
+        </>
+      )
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+
+      root.render(app)
+
+
+    </script>
+  </body>
+</html>
