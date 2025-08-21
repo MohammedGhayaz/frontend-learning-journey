@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">       
+
+      function App(){
+        const [value, setValue] = React.useState('');
+
+        function displayOnScreen(event){
+          setValue(event.target.value)
+        }
+
+
+        return (
+          <>
+            <div>
+              <input
+              value = {value} 
+              onChange={displayOnScreen}
+              type="text"
+              />
+              <button 
+                onClick={()=>{
+                  setValue('')
+                }}> Reset 
+              </button>
+              <button 
+                onClick={()=>{
+                  setValue('Alice')
+                }}> Example 
+              </button>
+            </div>
+            <p> {value} </p>
+          </>
+          
+        )
+      }
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+
+      root.render(<App />)
+
+    </script>
+  </body>
+</html>

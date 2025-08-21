@@ -15,7 +15,6 @@
     <script type="text/babel">
       
       function ChatInput( {chatMessages, setChatMessages}) {
-        const inputRef = React.useRef(null)
         const [inputValue, setInputValue] = React.useState('');
        
         
@@ -26,14 +25,14 @@
         function sendMessage(){     
           setInputValue('');
 
-          const message = inputRef.current.value;
+
                     
-          const chatbotMessage = Chatbot.getResponse(message);
+          const chatbotMessage = Chatbot.getResponse(inputValue);
           setChatMessages([
             ...chatMessages,
             {
               sender: 'user',
-              message: message,
+              message: inputValue,
               key: crypto.randomUUID()             
             },
             {
@@ -49,7 +48,6 @@
         return (
           <>
             <input 
-              ref = {inputRef}
               value = {inputValue}
               onChange = {saveInputValue}
               placeholder="Send a message to Chatbot" 
