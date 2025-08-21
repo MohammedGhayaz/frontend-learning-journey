@@ -19,7 +19,7 @@
         const [inputValue, setInputValue] = React.useState('');
        
         
-        function handleChange(e){
+        function saveInputValue(e){
           setInputValue(e.target.value);
         }
 
@@ -51,7 +51,7 @@
             <input 
               ref = {inputRef}
               value = {inputValue}
-              onChange = {handleChange}
+              onChange = {saveInputValue}
               placeholder="Send a message to Chatbot" 
               size="30"
             />
