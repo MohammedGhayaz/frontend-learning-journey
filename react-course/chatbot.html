@@ -3,8 +3,44 @@
   <head>
     <title>Chatbot</title>
   </head>
-  <body>
-    <div class="js-container"></div>
+  <style>
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{ 
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border:2px solid red
+    }
+    .input-container{
+      display: flex;
+    }
+
+    .text-input{
+      padding: 0.5rem;
+      padding-left: 16px ;
+      border-radius: 0.5rem;
+      border-width: 1px;
+      margin-right: 10px;
+      font-size: 15px;
+      flex: 1;
+    }
+
+    .input-button{
+      background-color: rgb(25, 135, 84);
+      color: white;
+      border: none;
+      padding: 0.70rem 1.25rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+
+  </style>
+
+    <body>
+    <div class="js-container container"></div>
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
@@ -46,26 +82,31 @@
 
         
         return (
-          <>
+          <div className="input-container">
             <input 
+              className = "text-input"
               value = {inputValue}
               onChange = {saveInputValue}
               placeholder="Send a message to Chatbot" 
-              size="30"
+              size="55"
             />
-            <button onClick={sendMessage}> Send message </button>
-          </>
+            <button
+             onClick={sendMessage}
+             className="input-button"
+             > Send
+            </button>
+          </div>
         );
       }
 
       function ChatMessage({sender, message}){
         return (
-          <div>
+          <div className= {sender==='robot'? 'robot-message' : 'user-message'}>
             {sender ==='robot' && 
             (
               <img src="./images/robot.png" width= "60" />
             )}
-            {message}
+              <div className="chat-message"> {message} </div>
             {sender ==='user' && 
             (
               <img src="./images/user.png" width= "60" />
@@ -78,7 +119,7 @@
 
         
         return (
-          <>
+          <div className="chat-messages">
             {chatMessages.map(chatMessage=>
               (
               <ChatMessage
@@ -88,7 +129,7 @@
               />
               )
             )}
-          </>
+          </div>
              
         )
       }
