@@ -13,6 +13,9 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      height: 95vh;
     }
     .input-container{
       display: flex;
@@ -25,7 +28,7 @@
       border-width: 1px;
       margin-right: 10px;
       font-size: 15px;
-      flex: 1;
+      flex-grow: 1;
     }
 
     .input-button{
@@ -42,8 +45,11 @@
       flex-direction: column;
       gap: 10px;
       margin-top: 16px;
-
-    }
+      flex-grow: 1;
+      overflow: scroll;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      }
 
     .user-message{
       display: flex;
@@ -64,6 +70,15 @@
       padding: 1rem;
       border-radius: 0.5rem;
     }
+
+    .toggle-view{
+      display:flex;
+      justify-content: center;
+      color: green;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
   </style>
 
     <body>
@@ -143,10 +158,17 @@
       }
 
       function ChatMessages({chatMessages}){
+        const divRef = React.useRef(null)
 
+        React.useEffect(()=>{
+          divRef.current.scrollTop = divRef.current.scrollHeight;
+        },[chatMessages])
         
         return (
-          <div className="chat-messages">
+          
+          <div 
+            ref={divRef}
+            className="chat-messages">
             {chatMessages.map(chatMessage=>
               (
               <ChatMessage
@@ -157,13 +179,23 @@
               )
             )}
           </div>
+          
+          
              
         )
       }
 
 
       function App(){
-        const [chatMessages, setChatMessages] = React.useState([])
+        const [chatMessages, setChatMessages] = React.useState([]);
+        const [istoggleView, setToggleView] = React.useState(false);
+        
+        
+
+        React.useEffect(()=>{
+          const container = document.querySelector('.container');
+          istoggleView?container.style.flexDirection='column':container.style.flexDirection='column-reverse';
+        },[istoggleView])
 
         return (
           <>
@@ -174,6 +206,14 @@
             <ChatMessages 
               chatMessages = {chatMessages}
             />
+            <div 
+              className="toggle-view"
+              onClick= {()=>{
+                setToggleView(prev=> !prev);
+              }}>
+              Move Textbox to bottom
+            </div>
+            
           </>
         )
       }
