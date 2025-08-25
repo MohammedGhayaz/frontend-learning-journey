@@ -188,14 +188,20 @@
 
       function App(){
         const [chatMessages, setChatMessages] = React.useState([]);
-        const [istoggleView, setToggleView] = React.useState(false);
+        const [isToggleView, setToggleView] = React.useState(()=>{
+          const saved = localStorage.getItem('toggleView');
+          return saved === 'true'
+        });
         
         
 
         React.useEffect(()=>{
+
+          localStorage.setItem( 'toggleView',isToggleView);
+
           const container = document.querySelector('.container');
-          istoggleView?container.style.flexDirection='column':container.style.flexDirection='column-reverse';
-        },[istoggleView])
+          container.style.flexDirection = isToggleView? 'column' : 'column-reverse';
+        },[isToggleView])
 
         return (
           <>
