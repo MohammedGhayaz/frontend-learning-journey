@@ -9,7 +9,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
     .container{ 
-      margin-top: 20px;
+      margin-top: 10px;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
@@ -19,6 +19,7 @@
     }
     .input-container{
       display: flex;
+      margin-top: 5px;
     }
 
     .text-input{
@@ -72,6 +73,7 @@
     }
 
     .toggle-view{
+      margin-top: 12px;
       display:flex;
       justify-content: center;
       color: green;
@@ -90,6 +92,7 @@
     <script src="https://unpkg.com/supersimpledev@8.6.4/chatbot.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    
     <script type="text/babel">
       
       function ChatInput( {chatMessages, setChatMessages}) {
@@ -101,6 +104,11 @@
         }
 
         function sendMessage(){     
+          if(!inputValue){
+            return(
+             alert('Enter a message')
+            )
+          }
           setInputValue('');
 
 
@@ -122,6 +130,12 @@
 
         }
 
+        function handleEnter(e){
+          if(e.key === 'Enter'){
+            sendMessage();
+          }
+        }
+
         
         return (
           <div className="input-container">
@@ -129,6 +143,7 @@
               className = "text-input"
               value = {inputValue}
               onChange = {saveInputValue}
+              onKeyDown = {handleEnter}
               placeholder="Send a message to Chatbot" 
               size="55"
             />
