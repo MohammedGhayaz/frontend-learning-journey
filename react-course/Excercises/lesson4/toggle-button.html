@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+  </head>
+  <style>
+    .button{
+        border: none;
+        padding: 0.75rem 1rem;
+        color: white;
+        background-color: green;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">       
+
+      function App(){
+				const buttonRef = React.useRef(null);
+        const [isButtonOn, setIsButtonOn] = React.useState(true);
+
+				React.useEffect(()=>{
+					if(isButtonOn){
+						buttonRef.current.style.backgroundColor = 'green'
+					}
+					else{
+						buttonRef.current.style.backgroundColor = 'red'
+					}
+				}, [isButtonOn])
+
+				function switchButton(){
+					setIsButtonOn(!isButtonOn);
+				}
+
+       return(
+        <button 
+					ref = {buttonRef}
+          className="button"
+					onClick={switchButton}>
+          {isButtonOn?'ON':'OFF'}
+        </button>
+       )
+      }
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+
+      root.render(<App />)
+
+    </script>
+  </body>
+</html>
