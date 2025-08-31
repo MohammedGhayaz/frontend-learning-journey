@@ -37,11 +37,18 @@
 
     function App() {
       const passwordRef = React.useRef(null);
+      const buttonRef = React.useRef(null);
       const [showPassword, setShowPassword] = React.useState(false);
 
 
       const togglePassword = () => {
         setShowPassword(!showPassword);
+
+        !showPassword ?
+          buttonRef.current.innerText = 'Hide' :
+          buttonRef.current.innerText = 'Show';
+
+
         if (passwordRef.current.type === 'password') {
           passwordRef.current.type = 'text';
         }
@@ -61,6 +68,7 @@
               placeholder="Password"
             />
             <button
+              ref={buttonRef}
               onClick={togglePassword}>
               Show
             </button>
