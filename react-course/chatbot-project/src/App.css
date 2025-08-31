@@ -1,0 +1,16 @@
+#root {
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+
+
+.default-message {
+  opacity: 0.5;
+  text-align: center;
+  margin: 10px 0px;
+}

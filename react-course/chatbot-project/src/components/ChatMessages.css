@@ -1,0 +1,23 @@
+
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  flex-grow: 1;
+  overflow: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+
+
+.toggle-view {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  color: green;
+  cursor: pointer;
+  text-decoration: underline;
+}
