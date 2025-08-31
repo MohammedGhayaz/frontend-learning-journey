@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>App</title>
+</head>
+<style>
+  button,
+  input {
+    padding: 0.75rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 0.5rem 0.25rem;
+    align-self: flex-start;
+    border-radius: 0.25rem;
+  }
+
+  input {
+    border: 1px solid;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>
+
+<body>
+  <div class="js-container"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <script type="text/babel">
+
+    function App() {
+      const passwordRef = React.useRef(null);
+      const [showPassword, setShowPassword] = React.useState(false);
+
+
+      const togglePassword = () => {
+        setShowPassword(!showPassword);
+        if (passwordRef.current.type === 'password') {
+          passwordRef.current.type = 'text';
+        }
+        else {
+          passwordRef.current.type = 'password';
+        }
+      }
+
+      return (
+        <div className="login-form">
+          <p>hello, welcome to my website</p>
+          <div><input type="text" placeholder="Email" /></div>
+          <div>
+            <input
+              ref={passwordRef}
+              type="Password"
+              placeholder="Password"
+            />
+            <button
+              onClick={togglePassword}>
+              Show
+            </button>
+          </div>
+          <div>
+            <button>Login</button>
+            <button>Signup</button>
+          </div>
+        </div>
+      );
+
+    }
+
+    const container = document.querySelector('.js-container');
+    const root = ReactDOM.createRoot(container);
+
+    root.render(<App />)
+
+  </script>
+</body>
+
+</html>
